@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - FX
+  - Tile
+  - BackgroundObject
+  - Projectile
+  - Enemy
+  - Skill
+  - UIScore
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Floor
+  - 
+  - Projectile
+  - Enemy
+  - Hero
+  - Background Object
+  - FX
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 3074509591
+    locked: 0
+  - name: Shadow
+    uniqueID: 1130235117
+    locked: 0
+  - name: BloodShed
+    uniqueID: 2448972957
+    locked: 0
+  - name: Treadable Background Object
+    uniqueID: 2541543025
+    locked: 0
+  - name: Projectile
+    uniqueID: 3694044445
+    locked: 0
+  - name: Enemy
+    uniqueID: 244629075
+    locked: 0
+  - name: Hero
+    uniqueID: 303567027
+    locked: 0
+  - name: Background Object
+    uniqueID: 771761907
+    locked: 0
+  - name: FX
+    uniqueID: 853149579
+    locked: 0
+  - name: UI
+    uniqueID: 2314690617
+    locked: 0

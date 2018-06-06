@@ -1,0 +1,827 @@
+fileFormatVersion: 2
+guid: f147c6d86c946d84d9cb83666479c381
+timeCreated: 1526136932
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Bullet_Small_6
+    21300002: Bullet_Small_5
+    21300004: Bullet_Small_4
+    21300006: Bullet_Small_3
+    21300008: Bullet_Small_2
+    21300010: Bullet_Small_7
+    21300012: Bullet_Small_1
+    21300014: Bullet_Small_8
+    21300016: Bullet_Small_0
+    21300018: Bullet_Small_9
+    21300020: Bullet_Small_15
+    21300022: Bullet_Small_10
+    21300024: Bullet_Small_11
+    21300026: Bullet_Small_12
+    21300028: Bullet_Small_13
+    21300030: Bullet_Small_14
+    21300032: Bullet_Medium_6
+    21300034: Bullet_Medium_5
+    21300036: Bullet_Medium_4
+    21300038: Bullet_Medium_3
+    21300040: Bullet_Medium_2
+    21300042: Bullet_Medium_7
+    21300044: Bullet_Medium_1
+    21300046: Bullet_Medium_8
+    21300048: Bullet_Medium_0
+    21300050: Bullet_Medium_9
+    21300052: Bullet_Medium_15
+    21300054: Bullet_Medium_10
+    21300056: Bullet_Medium_11
+    21300058: Bullet_Medium_12
+    21300060: Bullet_Medium_13
+    21300062: Bullet_Medium_14
+    21300064: Bullet_Large_6
+    21300066: Bullet_Large_5
+    21300068: Bullet_Large_4
+    21300070: Bullet_Large_3
+    21300072: Bullet_Large_2
+    21300074: Bullet_Large_7
+    21300076: Bullet_Large_1
+    21300078: Bullet_Large_8
+    21300080: Bullet_Large_0
+    21300082: Bullet_Large_9
+    21300084: Bullet_Large_15
+    21300086: Bullet_Large_10
+    21300088: Bullet_Large_11
+    21300090: Bullet_Large_12
+    21300092: Bullet_Large_13
+    21300094: Bullet_Large_14
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 20
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bullet_Small_6
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 222
+        width: 10
+        height: 10
+      alignment: 9
+      pivot: {x: 0.25786743, y: 0.76075745}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Small_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 222
+        width: 7
+        height: 12
+      alignment: 9
+      pivot: {x: 0.35365623, y: 0.7095375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Small_4
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 221
+        width: 5
+        height: 13
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8080386}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Small_3
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 222
+        width: 7
+        height: 12
+      alignment: 9
+      pivot: {x: 0.6463443, y: 0.70953876}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Small_2
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 222
+        width: 10
+        height: 10
+      alignment: 9
+      pivot: {x: 0.74213254, y: 0.751445}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Small_7
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 211
+        width: 12
+        height: 7
+      alignment: 9
+      pivot: {x: 0.29822287, y: 0.6463427}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Small_1
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 211
+        width: 12
+        height: 7
+      alignment: 9
+      pivot: {x: 0.70177716, y: 0.6463427}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Small_8
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 201
+        width: 13
+        height: 5
+      alignment: 9
+      pivot: {x: 0.19912544, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Small_0
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 201
+        width: 13
+        height: 5
+      alignment: 9
+      pivot: {x: 0.7786771, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Small_9
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 189
+        width: 12
+        height: 7
+      alignment: 9
+      pivot: {x: 0.30598354, y: 0.34035164}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Small_15
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 189
+        width: 12
+        height: 7
+      alignment: 9
+      pivot: {x: 0.70953816, y: 0.35365513}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Small_10
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 176
+        width: 10
+        height: 10
+      alignment: 9
+      pivot: {x: 0.25786743, y: 0.24855499}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Small_11
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 174
+        width: 7
+        height: 12
+      alignment: 9
+      pivot: {x: 0.35365623, y: 0.2904625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Small_12
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 174
+        width: 5
+        height: 13
+      alignment: 9
+      pivot: {x: 0.5, y: 0.20628826}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Small_13
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 174
+        width: 7
+        height: 12
+      alignment: 9
+      pivot: {x: 0.6330403, y: 0.29822287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Small_14
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 176
+        width: 10
+        height: 10
+      alignment: 9
+      pivot: {x: 0.74213254, y: 0.25786743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Medium_6
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 149
+        width: 11
+        height: 10
+      alignment: 9
+      pivot: {x: 0.27987948, y: 0.6862564}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Medium_5
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 149
+        width: 8
+        height: 13
+      alignment: 9
+      pivot: {x: 0.40687275, y: 0.6361084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Medium_4
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 149
+        width: 6
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0.77273124}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Medium_3
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 149
+        width: 8
+        height: 13
+      alignment: 9
+      pivot: {x: 0.5931282, y: 0.6289462}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Medium_2
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 149
+        width: 11
+        height: 10
+      alignment: 9
+      pivot: {x: 0.7370529, y: 0.6862564}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Medium_7
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 137
+        width: 13
+        height: 8
+      alignment: 9
+      pivot: {x: 0.3209079, y: 0.6164093}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Medium_1
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 137
+        width: 13
+        height: 8
+      alignment: 9
+      pivot: {x: 0.6719296, y: 0.62804794}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Medium_8
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 126
+        width: 14
+        height: 6
+      alignment: 9
+      pivot: {x: 0.22726814, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Medium_0
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 126
+        width: 14
+        height: 6
+      alignment: 9
+      pivot: {x: 0.7860369, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Medium_9
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 113
+        width: 13
+        height: 8
+      alignment: 9
+      pivot: {x: 0.3567263, y: 0.38358974}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Medium_15
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 113
+        width: 13
+        height: 8
+      alignment: 9
+      pivot: {x: 0.6432747, y: 0.3719473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Medium_10
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 99
+        width: 11
+        height: 10
+      alignment: 9
+      pivot: {x: 0.2883457, y: 0.29511642}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Medium_11
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 97
+        width: 8
+        height: 13
+      alignment: 9
+      pivot: {x: 0.3719492, y: 0.29941675}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Medium_12
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 96
+        width: 6
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2073119}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Medium_13
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 97
+        width: 8
+        height: 13
+      alignment: 9
+      pivot: {x: 0.62805367, y: 0.306579}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Medium_14
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 99
+        width: 11
+        height: 10
+      alignment: 9
+      pivot: {x: 0.7370529, y: 0.29511794}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Large_6
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 68
+        width: 13
+        height: 12
+      alignment: 9
+      pivot: {x: 0.3209078, y: 0.64745206}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Large_5
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 68
+        width: 8
+        height: 15
+      alignment: 9
+      pivot: {x: 0.44179535, y: 0.698673}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Large_4
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 68
+        width: 7
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.7735634}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Large_3
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 68
+        width: 8
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5582051, y: 0.698673}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Large_2
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 68
+        width: 13
+        height: 12
+      alignment: 9
+      pivot: {x: 0.671929, y: 0.6552124}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Large_7
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 55
+        width: 15
+        height: 8
+      alignment: 9
+      pivot: {x: 0.30753562, y: 0.5698457}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Large_1
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 55
+        width: 15
+        height: 8
+      alignment: 9
+      pivot: {x: 0.6924647, y: 0.55820465}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Large_8
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 41
+        width: 16
+        height: 7
+      alignment: 9
+      pivot: {x: 0.21479565, y: 0.48669434}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Large_0
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 41
+        width: 16
+        height: 7
+      alignment: 9
+      pivot: {x: 0.77938414, y: 0.49999672}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Large_9
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 26
+        width: 15
+        height: 8
+      alignment: 9
+      pivot: {x: 0.30132708, y: 0.43015337}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Large_15
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 26
+        width: 15
+        height: 8
+      alignment: 9
+      pivot: {x: 0.6986735, y: 0.43015337}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Large_10
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 9
+        width: 13
+        height: 12
+      alignment: 9
+      pivot: {x: 0.3137441, y: 0.32926503}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Large_11
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 6
+        width: 8
+        height: 15
+      alignment: 9
+      pivot: {x: 0.43015432, y: 0.2951186}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Large_12
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 5
+        width: 7
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.21479535}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Large_13
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 6
+        width: 8
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5582051, y: 0.30132708}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bullet_Large_14
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 9
+        width: 13
+        height: 12
+      alignment: 9
+      pivot: {x: 0.6790924, y: 0.32150435}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
