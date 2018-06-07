@@ -20,7 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4946445458363294}
   - component: {fileID: 114481370517831506}
-  - component: {fileID: 114862022754742176}
+  - component: {fileID: 114226239309468194}
+  - component: {fileID: 114193665515201762}
   - component: {fileID: 50027617227986312}
   - component: {fileID: 61090211044361394}
   m_Layer: 14
@@ -29,7 +30,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4946445458363294
 Transform:
   m_ObjectHideFlags: 1
@@ -88,6 +89,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &114193665515201762
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1089950809589208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8089db155f8d124e89fbadac2343914, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SetTime: 1
+  IsAlarmEnabled: 1
+--- !u!114 &114226239309468194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1089950809589208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8089db155f8d124e89fbadac2343914, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SetTime: 1
+  IsAlarmEnabled: 1
 --- !u!114 &114481370517831506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -99,17 +126,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f28f0e3aec1e4e34ca7704b6e3b91e18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: SwingLeft
+  PooledAmount: 1
+  WillGrow: 0
+  Lifespan: 0.2
+  CooldownTime: 0.25
   Elasticity: 2
-  FX: {fileID: 1528133864673980, guid: 0b377fce01bc35c4d92ccfb0ad40da7f, type: 2}
---- !u!114 &114862022754742176
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1089950809589208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e24d805f4f10c1b40a3a3a5826d62560, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Lifespan: 0.5
+  FX: {fileID: 114276820142071366, guid: 0b377fce01bc35c4d92ccfb0ad40da7f, type: 2}

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class BasicShooterBehaviour : MonoBehaviour
 {
@@ -58,21 +59,28 @@ public class BasicShooterBehaviour : MonoBehaviour
     {
         if (transform_ == null) return;
 
-        // Instantiate the bullet at the mentioned transform.
-        GameObject bullet = Instantiate(Bullet, _target.transform);
-        bullet.transform.SetPositionAndRotation(transform_.position, new Quaternion());
+        // Get the bullet from its pool at the mentioned transform.
+        PooledObject bulletPO = Bullet.GetComponent<BasicBulletBehaviour>();
+        PooledObject bulletInstance = bulletPO.GetObject();
+        Transform bulletTransform = bulletInstance.transform;
+        bulletTransform.SetParent(_target.transform);
+        Vector3 spawnPosition = transform_.position;
+        bulletTransform.SetPositionAndRotation(
+            new Vector3(spawnPosition.x, spawnPosition.y),
+            new Quaternion());
 
         // Setup the default behaviour of the bullet.
-        BasicBulletBehaviour behaviour = bullet.GetComponent<BasicBulletBehaviour>();
+        BasicBulletBehaviour behaviour = (BasicBulletBehaviour)bulletInstance;
         behaviour.SetTarget(_target);
         behaviour.SetOrigin(gameObject);
 
         // Setup the behaviour of the linear bullet if it has one.
-        LinearBulletBehaviour linear = bullet.GetComponent<LinearBulletBehaviour>();
-        if (linear != null)
+        try
         {
+            LinearBulletBehaviour linear = (LinearBulletBehaviour)bulletInstance;
             linear.SetDirection(transform_.localRotation * Vector3.right);
         }
+        catch (InvalidCastException) { }
 
         // Setup the behaviour of the targeting bullet if it has one.
         //TargetingBulletBehaviour targeting = bullet.GetComponent<TargetingBulletBehaviour>();

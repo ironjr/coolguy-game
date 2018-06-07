@@ -11,6 +11,7 @@ TagManager:
   - Enemy
   - Skill
   - UIScore
+  - App
   layers:
   - Default
   - TransparentFX

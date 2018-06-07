@@ -2,18 +2,20 @@
 using UnityEngine;
 using UnityEngine.Assertions;
 
+/// <summary>
+/// ObjectPool defines the pool of an object (prefab).
+/// Each ObjectPool manages one type of GameObject. The ObjectPools
+/// are managed by a Singleton PoolManager.
+/// </summary>
 [System.Serializable]
 public class ObjectPool
 {
     public GameObject PoolableObject;
-    public Transform ParentTransform = null;
     public int PooledAmount = 3;
     public bool WillGrow = true;
 
     [System.NonSerialized]
-    protected List<GameObject> _pool;
-    [System.NonSerialized]
-    protected IPoolable _poolable;
+    protected List<PooledObject> _pool;
 
     public int Count
     {
@@ -24,44 +26,68 @@ public class ObjectPool
     }
 
     #region Interface
-    public ObjectPool(GameObject go, Transform parent, int pooledAmount, bool willGrow)
+    public ObjectPool(GameObject go, int pooledAmount, bool willGrow)
     {
         PoolableObject = go;
-        ParentTransform = parent;
         PooledAmount = pooledAmount;
         WillGrow = willGrow;
 
-        _poolable = PoolableObject.GetComponent<IPoolable>();
-        Assert.IsNotNull(_poolable);
-        _pool = new List<GameObject>();
+        PooledObject po = PoolableObject.GetComponent<PooledObject>();
+        Assert.IsNotNull(po);
+        _pool = new List<PooledObject>();
         InitializePool();
 	}
 
-    public GameObject GetObject()
+    public PooledObject GetObject()
     {
         for (int i = 0; i < _pool.Count; ++i)
         {
-            if (!_pool[i].activeInHierarchy)
+            if (!_pool[i].gameObject.activeInHierarchy)
             {
-                _poolable.OnCheckout();
+                _pool[i].gameObject.SetActive(true);
+                _pool[i].OnFetchFromPool();
                 return _pool[i];
             }
         }
 
         if (WillGrow)
         {
-            if (ParentTransform == null)
+            GameObject go = GameObject.Instantiate(PoolableObject);
+            PooledObject po = go.GetComponent<PooledObject>();
+            _pool.Add(po);
+            po.OnInstantiate();
+            po.OnFetchFromPool();
+            return po;
+        }
+
+        return null;
+    }
+
+    public PooledObject GetObject(Transform parentTransform)
+    {
+        for (int i = 0; i < _pool.Count; ++i)
+        {
+            PooledObject po = _pool[i];
+            GameObject go = po.gameObject;
+            Transform tf = po.transform;
+            if (!go.activeInHierarchy)
             {
-                GameObject go = GameObject.Instantiate(PoolableObject);
-                _pool.Add(go);
+                tf.SetParent(parentTransform);
+                tf.localPosition = new Vector3();
+                go.SetActive(true);
+                po.OnFetchFromPool();
+                return po;
             }
-            else
-            {
-                GameObject go = GameObject.Instantiate(PoolableObject, ParentTransform);
-                _pool.Add(go);
-            }
-            _poolable.OnInstantiate();
-            _poolable.OnCheckout();
+        }
+
+        if (WillGrow)
+        {
+            GameObject go = GameObject.Instantiate(PoolableObject, parentTransform);
+            PooledObject po = go.GetComponent<PooledObject>();
+            _pool.Add(po);
+            po.OnInstantiate();
+            po.OnFetchFromPool();
+            return po;
         }
 
         return null;
@@ -69,35 +95,23 @@ public class ObjectPool
 
     public void InitializePool()
     {
-        if (ParentTransform == null)
+        PoolableObject.SetActive(false);
+        for (int i = 0; i < PooledAmount; ++i)
         {
-            for (int i = 0; i < PooledAmount; ++i)
-            {
-                GameObject go = GameObject.Instantiate(PoolableObject);
-                go.SetActive(false);
-                _pool.Add(go);
-                _poolable.OnInstantiate();
-            }
-        }
-        else
-        {
-            for (int i = 0; i < PooledAmount; ++i)
-            {
-                GameObject go = GameObject.Instantiate(PoolableObject, ParentTransform);
-                go.SetActive(false);
-                _pool.Add(go);
-                _poolable.OnInstantiate();
-            }
+            GameObject go = GameObject.Instantiate(PoolableObject);
+            PooledObject po = go.GetComponent<PooledObject>();
+            _pool.Add(po);
+            po.OnInstantiate();
         }
     }
 
     public void DestroyPool()
     {
         int len = _pool.Count;
-        for (int i = 0; i < len; ++i)
+        for (int i = len - 1; i >= 0; --i)
         {
-            GameObject.Destroy(_pool[0]);
-            _pool.RemoveAt(0);
+            GameObject.Destroy(_pool[i]);
+            _pool.RemoveAt(i);
         }
     }
     #endregion // Interface

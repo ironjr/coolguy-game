@@ -37,9 +37,14 @@ public class EnemySpawner : MonoBehaviour
             GameObject newEnemy;
             for (int i = 0; i < numObjects; ++i)
             {
-                newEnemy = Instantiate(Enemies[GetIndexFromWeightedRandom(Enemies)].Object);
+                BasicEnemyBehaviour behaviour = Enemies[GetIndexFromWeightedRandom(Enemies)]
+                    .Object.GetComponent<BasicEnemyBehaviour>();
+                newEnemy = behaviour.GetObject().gameObject;
+                float x = Random.Range(MinX, MaxX);
+                float y = Random.Range(MinY, MaxY);
+                float z = (y - MinY) / 10.0f;
                 newEnemy.transform.SetPositionAndRotation(
-                    new Vector3(Random.Range(MinX, MaxX), Random.Range(MinY, MaxY)),
+                    new Vector3(x, y, z),
                     new Quaternion());
             }
         }

@@ -1,14 +1,16 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
-public class BasicBulletBehaviour : MonoBehaviour, IPoolable
+public class BasicBulletBehaviour : PooledObject
 {
     public int Damage = 1;
     public float Speed = 5.0f;
     public Sprite[] BulletSprites;
-    public GameObject[] HitEffects;
-    public GameObject EquivalentTargetingBullet;
+    public PooledObject[] HitEffects;
+    public PooledObject EquivalentTargetingBullet;
 
     protected int _numSprites;
+    protected float _speed;
     protected GameObject _origin;
     protected GameObject _target;
     protected bool _flagReflected = false;
@@ -21,13 +23,10 @@ public class BasicBulletBehaviour : MonoBehaviour, IPoolable
         }
     }
 
-    #region IPoolable
-    public void OnInstantiate() { }
-    
-    public void OnCheckout() { }
-
-    public void OnReturn() { }
-    #endregion
+    void Awake()
+    {
+        _speed = Speed;
+    }
 
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
@@ -41,15 +40,21 @@ public class BasicBulletBehaviour : MonoBehaviour, IPoolable
             {
                 _target.GetComponent<BasicEnemyBehaviour>().ReceiveDamage(Damage, _origin);
             }
-            GameObject hitEffect = Instantiate(HitEffects[Random.Range(0, HitEffects.Length)]);
+            PooledObject hitEffect = HitEffects[UnityEngine.Random.Range(0, HitEffects.Length)].GetObject();
             hitEffect.transform.position = transform.position;
-            Destroy(gameObject);
+            ReturnToPool();
         }
     }
 
-    public void SetSpeed(float speed)
+    public override void OnFetchFromPool()
     {
-        Speed = speed;
+        _speed = Speed;
+        base.OnFetchFromPool();
+    }
+
+    public void Set_speed(float speed)
+    {
+        _speed = speed;
     }
 
     public void SetOrigin(GameObject origin)
@@ -66,20 +71,24 @@ public class BasicBulletBehaviour : MonoBehaviour, IPoolable
     {
         if (_origin != null)
         {
-            GameObject bullet = Instantiate(EquivalentTargetingBullet, _origin.transform);
-            bullet.transform.SetPositionAndRotation(transform.position, new Quaternion());
-            TargetingBulletBehaviour behaviour = bullet.GetComponent<TargetingBulletBehaviour>();
-            behaviour.SetTarget(_origin);
-            behaviour.SetOrigin(_target);
-            behaviour._flagReflected = true;
-            behaviour.SetSpeed(behaviour.Speed * elasticity);
-            gameObject.SetActive(false);
-            Destroy(gameObject);
+            PooledObject bulletPO = EquivalentTargetingBullet.GetObject();
+            Transform bulletTransform = bulletPO.transform;
+            bulletTransform.SetParent(_origin.transform);
+            bulletTransform.SetPositionAndRotation(transform.position, new Quaternion());
+            try
+            {
+                TargetingBulletBehaviour behaviour = (TargetingBulletBehaviour)bulletPO;
+                behaviour.SetTarget(_origin);
+                behaviour.SetOrigin(_target);
+                behaviour._flagReflected = true;
+                behaviour.Set_speed(behaviour._speed * elasticity);
+            }
+            catch (InvalidCastException) { }
+            ReturnToPool();
         }
         else
         {
-            gameObject.SetActive(false);
-            Destroy(gameObject);
+            ReturnToPool();
         }
     }
 

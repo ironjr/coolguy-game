@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 
-public class BasicEnemyBehaviour : MonoBehaviour
+[RequireComponent(typeof(Rigidbody2D))]
+public class BasicEnemyBehaviour : PooledObject
 {
     public int Score = 1;
     public uint EnemyLevel = 1u;
     public uint MaxHealth = 1u;
     public float WalkSpeed = 2.0f;
-    public GameObject[] Bloodsheds;
+    public PooledObject[] Bloodsheds;
     public float BloodshedSize = 1.0f;
 
     private static readonly float BLOODSHED_OFFSET_Y = +0.6f;
@@ -22,19 +23,11 @@ public class BasicEnemyBehaviour : MonoBehaviour
     private Transform _transform;
     private static GameManager _gameManager;
 
-    #region IPoolable
-    public void OnInstantiate() { }
-    
-    public void OnCheckout() { }
-
-    public void OnReturn() { }
-    #endregion
-
     void Awake()
     {
         _health = (int)MaxHealth;
         _transform = transform;
-        _gameManager = GameObject.Find("_GameManager").GetComponent<GameManager>();
+        _gameManager = GameManager.Instance;
     }
 
     void Update()
@@ -42,7 +35,7 @@ public class BasicEnemyBehaviour : MonoBehaviour
         switch (_navState)
         {
             case NavState.FreeToGo:
-                _transform.localPosition += new Vector3(0.0f, -1.0f, 0.1f) *
+                _transform.localPosition += new Vector3(0.0f, -1.0f, -0.1f) *
                     Time.deltaTime * WalkSpeed;
                 break;
             case NavState.ObstacleEncountered:
@@ -76,7 +69,7 @@ public class BasicEnemyBehaviour : MonoBehaviour
         _health -= damage;
         if (Bloodsheds != null)
         {
-            GameObject bloodShed = Instantiate(Bloodsheds[Random.Range(0, Bloodsheds.Length)]);
+            PooledObject bloodShed = Bloodsheds[Random.Range(0, Bloodsheds.Length)].GetObject();
             Transform bloodShedTransform = bloodShed.transform;
             bloodShedTransform.SetPositionAndRotation(
                 _transform.position - new Vector3(0, BLOODSHED_OFFSET_Y),
@@ -98,6 +91,6 @@ public class BasicEnemyBehaviour : MonoBehaviour
             // Add score.
             _gameManager.GainScore(Score);
         }
-        Destroy(gameObject);
+        ReturnToPool();
     }
 }

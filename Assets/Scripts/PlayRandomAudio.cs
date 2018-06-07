@@ -15,11 +15,16 @@ public class PlayRandomAudio : MonoBehaviour
 
     void Start()
     {
-        if (AudioClipList != null)
+        Play();
+	}
+
+    public void Play()
+    {
+        if (_audioSource.isActiveAndEnabled && AudioClipList != null)
         {
             int index = Random.Range(0, AudioClipList.Length);
             _audioSource.clip = AudioClipList[index];
             _audioSource.Play();
         }
-	}
+    }
 }

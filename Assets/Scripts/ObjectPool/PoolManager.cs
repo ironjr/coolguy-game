@@ -1,56 +1,42 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class PoolManager : MonoBehaviour
+/// <summary>
+/// PoolManager manages object pools exist in the game scene.
+/// There can only be one instance of the PoolManager and thus it is
+/// defined as Singleton.
+/// </summary>
+public class PoolManager : Singleton<PoolManager> 
 {
-    public static PoolManager Instance;
-    public Dictionary<string, ObjectPool> Pools;
+    /// <summary>
+    /// Pools are defined as a generic Dictionary.
+    /// </summary>
+    [System.NonSerialized]
+    protected Dictionary<string, ObjectPool> Pools;
 
-    void Awake()
+    protected override void OnAwake()
     {
-        Instance = this;
         Pools = new Dictionary<string, ObjectPool>();
     }
 
-    public void NewPool(GameObject prefab)
+    public ObjectPool NewPool(string ID, GameObject prefab, int pooledAmount, bool willGrow)
     {
-        ObjectPool pool = new ObjectPool(prefab, null, 3, true);
-        Pools.Add(prefab.name, pool);
-    }
-
-    public void NewPool(GameObject prefab, int pooledAmount)
-    {
-        ObjectPool pool = new ObjectPool(prefab, null, pooledAmount, true);
-        Pools.Add(prefab.name, pool);
-    }
-    
-    public void NewPool(GameObject prefab, int pooledAmount, bool willGrow)
-    {
-        ObjectPool pool = new ObjectPool(prefab, null, pooledAmount, willGrow);
-        Pools.Add(prefab.name, pool);
-    }
-
-    public void NewPool(GameObject prefab, Transform parent)
-    {
-        ObjectPool pool = new ObjectPool(prefab, parent, 3, true);
-        Pools.Add(prefab.name, pool);
-    }
-
-    public void NewPool(GameObject prefab, Transform parent, int pooledAmount)
-    {
-        ObjectPool pool = new ObjectPool(prefab, parent, pooledAmount, true);
-        Pools.Add(prefab.name, pool);
-    }
-
-    public void NewPool(GameObject prefab, Transform parent, int pooledAmount, bool willGrow)
-    {
-        ObjectPool pool = new ObjectPool(prefab, parent, pooledAmount, willGrow);
-        Pools.Add(prefab.name, pool);
+        ObjectPool pool = new ObjectPool(prefab, pooledAmount, willGrow);
+        Pools.Add(ID, pool);
+        return pool;
     }
 
     public ObjectPool GetPool(string name)
     {
-        return Pools[name];
+        ObjectPool pool;
+        try
+        {
+            pool = Pools[name];
+        }
+        catch (KeyNotFoundException)
+        {
+            return null;
+        }
+        return pool;
     }
 }

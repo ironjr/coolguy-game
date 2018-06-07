@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 
-public class SwingSkill : MonoBehaviour
+public class SwingSkill : BasicSkillBehaviour
 {
     public float Elasticity = 2.0f;
-    public GameObject FX;
+    public PooledObject FX;
 
-    void OnEnable()
+    private Transform _transform;
+
+    void Awake()
     {
-        Instantiate(FX, transform.parent.transform);
+        _transform = transform;
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -16,5 +18,11 @@ public class SwingSkill : MonoBehaviour
         BasicBulletBehaviour behaviour = other.gameObject.GetComponent<BasicBulletBehaviour>();
         if (behaviour.FlagReflected) return;
         behaviour.Reflect(Elasticity);
+    }
+    
+    public override void OnFetchFromPool()
+    {
+        base.OnFetchFromPool();
+        FX.GetObject(_transform.parent);
     }
 }

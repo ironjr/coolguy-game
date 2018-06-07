@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour {
-
+public class PlayerHealth : MonoBehaviour
+{
     /**
      * Setup maximum hit point the player can have in the game. The HP of the
      * player restores itself one unit per fixed length of period.
@@ -10,8 +10,7 @@ public class PlayerHealth : MonoBehaviour {
     public float HealthRegenPeriod = 1.0f;
     public float PositionMultiplier = 0.9f;
     public float Speed = 0.5f;
-    public GameObject[] Bloodsheds;
-    public GameObject DeathZoneObject;
+    public PooledObject[] Bloodsheds;
 
     public bool IsDead
     {
@@ -36,12 +35,13 @@ public class PlayerHealth : MonoBehaviour {
     private float _regenTimer;
     private float _deathZoneY;
     private Transform _transform;
+    private DeathZone _deathZone;
 
     void Awake()
     {
         _transform = transform;
-        DeathZone deathZone = DeathZoneObject.GetComponent<DeathZone>();
-        _deathZoneY = deathZone.DeathZoneBoundaryY;
+        _deathZone = DeathZone.Instance;
+        _deathZoneY = _deathZone.DeathZoneBoundaryY;
         _health = (int)MaxHealth;
         _regenAmount = 1;
         _regenTimer = .0f;
@@ -113,7 +113,7 @@ public class PlayerHealth : MonoBehaviour {
             if (Bloodsheds != null)
             {
                 // Player bleeds a lot.
-                GameObject bloodShed = Instantiate(Bloodsheds[Random.Range(0, Bloodsheds.Length)]);
+                PooledObject bloodShed = Bloodsheds[Random.Range(0, Bloodsheds.Length)].GetObject();
                 bloodShed.transform.SetPositionAndRotation(
                     _transform.position - new Vector3(0, BLOODSHED_OFFSET_Y),
                     Quaternion.Euler(new Vector3(180.0f * Random.Range(0, 2), 180.0f * Random.Range(0, 2))));
@@ -129,13 +129,13 @@ public class PlayerHealth : MonoBehaviour {
     private void Die()
     {
         // Some effects make player dying majestically.
-        DeathZone deathZone = DeathZoneObject.GetComponent<DeathZone>();
-        deathZone.GenerateExplosion(_transform.position, new Vector3(3, 3));
-        GameObject bloodShed = Instantiate(Bloodsheds[Random.Range(0, Bloodsheds.Length)]);
-        bloodShed.transform.SetPositionAndRotation(
+        _deathZone.GenerateExplosion(_transform.position, new Vector3(3, 3));
+        PooledObject bloodShed = Bloodsheds[Random.Range(0, Bloodsheds.Length)].GetObject();
+        Transform bloodShedTransform = bloodShed.transform;
+        bloodShedTransform.SetPositionAndRotation(
             _transform.position - new Vector3(0, BLOODSHED_OFFSET_Y),
             Quaternion.Euler(new Vector3(180.0f * Random.Range(0, 2), 180.0f * Random.Range(0, 2))));
-        bloodShed.transform.localScale = new Vector3(3, 3);
+        bloodShedTransform.localScale = new Vector3(3, 3);
 
         // Player is now dead. Which is irreversible.
         _state = State.Dead;
@@ -148,6 +148,6 @@ public class PlayerHealth : MonoBehaviour {
         Destroy(gameObject, 10.0f);
 
         // Send GameManager the game is now over.
-        GameObject.Find("_GameManager").GetComponent<GameManager>().GameOver();
+        GameManager.Instance.GameOver();
     }
 }

@@ -21,10 +21,10 @@ GameObject:
   - component: {fileID: 4664962098502548}
   - component: {fileID: 212956319884526544}
   - component: {fileID: 95543679784269782}
-  - component: {fileID: 114222454559965402}
-  - component: {fileID: 58731784407505230}
-  - component: {fileID: 114979251580058976}
   - component: {fileID: 50221965034461854}
+  - component: {fileID: 58731784407505230}
+  - component: {fileID: 114222454559965402}
+  - component: {fileID: 114979251580058976}
   m_Layer: 12
   m_Name: Hero
   m_TagString: Player
@@ -171,12 +171,11 @@ MonoBehaviour:
   PositionMultiplier: 0.9
   Speed: 0.5
   Bloodsheds:
-  - {fileID: 1236311661045400, guid: d33319bb9c7ccad418a24618ab96bfbc, type: 2}
-  - {fileID: 1303038283529636, guid: 050201ea2f6df8a4389c56727dbe2065, type: 2}
-  - {fileID: 1649829209708062, guid: 5791082909c496a449bc6fa0c4490477, type: 2}
-  - {fileID: 1585826473360728, guid: 4b8a0c1a99baed549b131da8c189a5f6, type: 2}
-  - {fileID: 1270192102037350, guid: d28c68812dd8c11459c99530c5e6d2e8, type: 2}
-  DeathZoneObject: {fileID: 0}
+  - {fileID: 114722060528140618, guid: d33319bb9c7ccad418a24618ab96bfbc, type: 2}
+  - {fileID: 114302362924884672, guid: 050201ea2f6df8a4389c56727dbe2065, type: 2}
+  - {fileID: 114939369912845884, guid: 5791082909c496a449bc6fa0c4490477, type: 2}
+  - {fileID: 114503492044514130, guid: 4b8a0c1a99baed549b131da8c189a5f6, type: 2}
+  - {fileID: 114637024655720174, guid: d28c68812dd8c11459c99530c5e6d2e8, type: 2}
 --- !u!114 &114979251580058976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -188,13 +187,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75d35b7100f40e043bfee7c950d01853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CooldownTime: 0.25
-  SwingLeftAction: {fileID: 1089950809589208, guid: b5d123a16ec5c7b478efc1d4a1433905,
+  CooldownTime: 0.2
+  SwingLeftAction: {fileID: 114481370517831506, guid: b5d123a16ec5c7b478efc1d4a1433905,
     type: 2}
-  SwingRightAction: {fileID: 1604290135917244, guid: f423a31b5296b3544aa839d3b94d7e13,
+  SwingRightAction: {fileID: 114153593006486250, guid: f423a31b5296b3544aa839d3b94d7e13,
     type: 2}
-  SwingLeftTransform: {fileID: 4381409244149078}
-  SwingRightTransform: {fileID: 4435882191992132}
 --- !u!212 &212956319884526544
 SpriteRenderer:
   m_ObjectHideFlags: 1

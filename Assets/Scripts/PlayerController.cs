@@ -3,23 +3,28 @@
 public class PlayerController : MonoBehaviour
 {
     public float CooldownTime = 0.25f;
-    public GameObject SwingLeftAction;
-    public GameObject SwingRightAction;
-    public Transform SwingLeftTransform;
-    public Transform SwingRightTransform;
+    public SwingSkill SwingLeftAction;
+    public SwingSkill SwingRightAction;
 
     private float _cooldownTimeLeft = 0.0f;
+    private Transform _swingLeftTransform;
+    private Transform _swingRightTransform;
     private PlayerHealth _playerHealth;
-    private GameObject _swingLeft;
-    private GameObject _swingRight;
+
+    private bool _isSwingSkillActive
+    {
+        get
+        {
+            return SwingLeftAction.IsActive || SwingRightAction.IsActive;
+        }
+    }
 
     void Awake()
     {
+        Transform transform_ = transform;
+        _swingLeftTransform = transform_.GetChild(0);
+        _swingRightTransform = transform_.GetChild(1);
         _playerHealth = GetComponent<PlayerHealth>();
-        _swingLeft = Instantiate(SwingLeftAction, SwingLeftTransform);
-        _swingRight = Instantiate(SwingRightAction, SwingRightTransform);
-        _swingLeft.SetActive(false);
-        _swingRight.SetActive(false);
     }
 
     void Update()
@@ -52,11 +57,13 @@ public class PlayerController : MonoBehaviour
 
     private void SwingLeft()
     {
-        _swingLeft.SetActive(true);
+        if (_isSwingSkillActive) return;
+        SwingLeftAction.Activate(_swingLeftTransform);
     }
 
     private void SwingRight()
     {
-        _swingRight.SetActive(true);
+        if (_isSwingSkillActive) return;
+        SwingRightAction.Activate(_swingRightTransform);
     }
 }
