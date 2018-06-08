@@ -1,6 +1,6 @@
 ﻿using System;
 
-public static class RandomGenerator
+public static class RandomDistributionGenerator
 {
     public static double NextGaussianDouble(this Random r)
     {

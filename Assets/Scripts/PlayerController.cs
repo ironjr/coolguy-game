@@ -21,9 +21,9 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
-        Transform transform_ = transform;
-        _swingLeftTransform = transform_.GetChild(0);
-        _swingRightTransform = transform_.GetChild(1);
+        Transform swingSkillTransform = transform.GetChild(0);
+        _swingLeftTransform = swingSkillTransform.GetChild(0);
+        _swingRightTransform = swingSkillTransform.GetChild(1);
         _playerHealth = GetComponent<PlayerHealth>();
     }
 

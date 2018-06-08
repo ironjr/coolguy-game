@@ -11,6 +11,7 @@ public class PlayerHealth : MonoBehaviour
     public float PositionMultiplier = 0.9f;
     public float Speed = 0.5f;
     public PooledObject[] Bloodsheds;
+    public Transform BackgroundObjectContainerTransform;
 
     public bool IsDead
     {
@@ -91,7 +92,7 @@ public class PlayerHealth : MonoBehaviour
                 // Move the player character to the appropriate hit point line.
                 playerPos = _transform.position;
                 relativePos = GetPlayerPositionFromHealth() - playerPos;
-                _transform.localPosition += relativePos * Speed * 1.5f * deltaTime;
+                _transform.localPosition += relativePos * Speed * 3.0f * deltaTime;
                 break;
             case State.Dead:
                 //_transform.localPosition += Vector3.down * Speed * deltaTime;
@@ -142,7 +143,7 @@ public class PlayerHealth : MonoBehaviour
 
         // This cause the board manager to move the player remnant down with
         // the same speed as other board objects.
-        gameObject.tag = "BackgroundObject";
+        _transform.SetParent(BackgroundObjectContainerTransform);
 
         // Destroy player object after certain amount of time.
         Destroy(gameObject, 10.0f);

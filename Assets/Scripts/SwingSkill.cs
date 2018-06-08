@@ -3,6 +3,7 @@
 public class SwingSkill : BasicSkillBehaviour
 {
     public float Elasticity = 2.0f;
+    public bool IsLeft = true;
     public PooledObject FX;
 
     private Transform _transform;
@@ -14,7 +15,9 @@ public class SwingSkill : BasicSkillBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.gameObject.CompareTag("Projectile")) return;
+        GameObject go = other.gameObject;
+        if (!go.CompareTag("Projectile")) return;
+        if (IsLeft != (go.transform.position.x < 0.0f)) return;
         BasicBulletBehaviour behaviour = other.gameObject.GetComponent<BasicBulletBehaviour>();
         if (behaviour.FlagReflected) return;
         behaviour.Reflect(Elasticity);

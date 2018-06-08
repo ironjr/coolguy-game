@@ -5,30 +5,39 @@ using UnityEngine;
 public class DeathZone : Singleton<DeathZone>
 {
     public float DeathZoneBoundaryY = -6.4f;
-    public float BombingRate = 0.7f;
+    public float BombingRate = 1.0f;
+    public int CameraShakeRate = 10;
     public float MaxDelayedKill = 1.6f;
-    public PooledObject[] Explosions;
-
     public float XMax = 4.8f;
     public float XMin = -4.8f;
     public float YMax = -6.0f;
     public float YMin = -8.0f;
+    public PooledObject[] Explosions;
+    public PooledObject[] PitHoles;
 
-    private float _timer;
+    private float _bombTimer = 0.0f;
+    private int _bombCounter;
+    private CameraShake _cameraShake;
 
-	void Start()
+    protected override void OnAwake()
     {
-        _timer = 0.0f;
-	}
+        _bombCounter = Random.Range(0, 2 * CameraShakeRate);
+        _cameraShake = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShake>();
+    }
 	
     // Schedule bombing randomly with the bombing rate.
 	void Update()
     {
-        _timer += Time.deltaTime;
-        if (Random.Range(0, 1.0f / BombingRate) < _timer)
+        _bombTimer += Time.deltaTime;
+        if (Random.Range(0, 1.0f / BombingRate) < _bombTimer)
         {
             GenerateExplosion(new Vector3(1.0f, 1.0f, 1.0f));
-            _timer = 0.0f;
+            _bombTimer = 0.0f;
+            if (--_bombCounter <= 0)
+            {
+                _cameraShake.ShakeCamera();
+                _bombCounter = Random.Range(0, 2 * CameraShakeRate);
+            }
         }
 	}
 
@@ -56,29 +65,24 @@ public class DeathZone : Singleton<DeathZone>
     {
         PooledObject explosion = Explosions[Random.Range(0, Explosions.Length)].GetObject();
         Transform explosionTransform = explosion.transform;
-        explosionTransform.SetPositionAndRotation(GetRandomCoord(), GetRandomQuaternion());
+        explosionTransform.SetPositionAndRotation(GetRandomCoord(), RandomFlip2D.NextFlipXYRotsqZ());
         explosionTransform.localScale = scale;
+        PooledObject pitHole = PitHoles[Random.Range(0, PitHoles.Length)].GetObject();
+        pitHole.transform.SetPositionAndRotation(explosionTransform.position, RandomFlip2D.NextFlipXY());
     }
 
     public void GenerateExplosion(Vector3 coord, Vector3 scale)
     {
         PooledObject explosion = Explosions[Random.Range(0, Explosions.Length)].GetObject();
         Transform explosionTransform = explosion.transform;
-        explosionTransform.SetPositionAndRotation(coord, GetRandomQuaternion());
+        explosionTransform.SetPositionAndRotation(coord, RandomFlip2D.NextFlipXYRotsqZ());
         explosionTransform.localScale = scale;
+        PooledObject pitHole = PitHoles[Random.Range(0, PitHoles.Length)].GetObject();
+        pitHole.transform.SetPositionAndRotation(explosionTransform.position, RandomFlip2D.NextFlipXY());
     }
 
     private Vector3 GetRandomCoord()
     {
         return new Vector3(Random.Range(XMin, XMax), Random.Range(YMin, YMax));
-    }
-
-    private Quaternion GetRandomQuaternion()
-    {
-        int random = Random.Range(0, 16);
-        int flipX = random & 0x1;
-        int flipY = random & 0x2;
-        int rotate = random >> 2;
-        return Quaternion.Euler(flipX * 180.0f, flipY * 180.0f, rotate * 90.0f);
     }
 }

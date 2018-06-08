@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 114153593006486250}
   - component: {fileID: 114291408729240448}
   - component: {fileID: 114426621884110688}
-  - component: {fileID: 50527631349469392}
-  - component: {fileID: 61478265504430136}
+  - component: {fileID: 50105462372871920}
+  - component: {fileID: 58033609361728828}
   m_Layer: 14
   m_Name: SwingRight
   m_TagString: Skill
@@ -44,7 +44,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50527631349469392
+--- !u!50 &50105462372871920
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
@@ -64,8 +64,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61478265504430136
-BoxCollider2D:
+--- !u!58 &58033609361728828
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -76,19 +76,9 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: -0.5, y: 0}
   serializedVersion: 2
-  m_Size: {x: 3, y: 2}
-  m_EdgeRadius: 0
+  m_Radius: 1.5
 --- !u!114 &114153593006486250
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -106,6 +96,7 @@ MonoBehaviour:
   Lifespan: 0.2
   CooldownTime: 0.25
   Elasticity: 2
+  IsLeft: 0
   FX: {fileID: 114635835861762486, guid: 5be8a22735ca3004ca54c697d4719909, type: 2}
 --- !u!114 &114291408729240448
 MonoBehaviour:

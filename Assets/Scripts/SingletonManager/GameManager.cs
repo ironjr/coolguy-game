@@ -6,7 +6,6 @@ public class GameManager : Singleton<GameManager>
     public uint Score = 0u;
     public uint PersonalHighScore = 0u;
     public int CurrentThemeID = 0;
-    public GameObject GameOverUIObject;
 
     public enum GameState
     {
@@ -14,10 +13,25 @@ public class GameManager : Singleton<GameManager>
         Over
     }
 
-    public GameState State = GameState.Running;
-
+    private GameState _state = GameState.Running;
     private static JsonManager _jsonManager;
     private static LayoutManager _layoutManager;
+
+    public bool IsOver
+    {
+        get
+        {
+            return _state == GameState.Over;
+        }
+    }
+
+    public bool IsRunning
+    {
+        get
+        {
+            return _state == GameState.Running;
+        }
+    }
 
     protected override void OnAwake()
     {
@@ -35,7 +49,7 @@ public class GameManager : Singleton<GameManager>
 
     void Update()
     {
-        switch (State)
+        switch (_state)
         {
             case GameState.Running:
                 if (Input.GetKey(KeyCode.Escape))
@@ -79,14 +93,14 @@ public class GameManager : Singleton<GameManager>
 
     public void GameOver()
     {
-        State = GameState.Over;
+        _state = GameState.Over;
         if (PersonalHighScore < Score)
         {
             PersonalHighScore = Score;
             _jsonManager.PersonalHighScore = PersonalHighScore;
             _jsonManager.SaveData();
         }
-        GameOverUIObject.SetActive(true);
+        _layoutManager.DisplayGameOver(Score, PersonalHighScore);
         Debug.Log("Game is over!");
     }
 

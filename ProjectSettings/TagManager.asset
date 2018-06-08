@@ -55,7 +55,7 @@ TagManager:
   - name: Shadow
     uniqueID: 1130235117
     locked: 0
-  - name: BloodShed
+  - name: Stain
     uniqueID: 2448972957
     locked: 0
   - name: Treadable Background Object
@@ -78,4 +78,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 2314690617
+    locked: 0
+  - name: Mask All
+    uniqueID: 1248668347
     locked: 0

@@ -232,7 +232,6 @@ MonoBehaviour:
   - {fileID: 4879525541193768}
   - {fileID: 4940074177717980}
   - {fileID: 4291009399496600}
-  - {fileID: 0}
 --- !u!114 &114605611438070088
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -245,7 +244,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: Enemy_HoodVeteran
-  Parent: {fileID: 0}
   PooledAmount: 3
   WillGrow: 1
   Score: 4

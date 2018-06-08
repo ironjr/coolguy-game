@@ -44,7 +44,7 @@ public class BasicShooterBehaviour : MonoBehaviour
                         int len = BulletSpawns.Length;
                         for (int i = 0; i < len; ++i)
                         {
-                            Shoot(ref BulletSpawns[i]);
+                            Shoot(BulletSpawns[i]);
                         }
                     }
                 }
@@ -55,17 +55,15 @@ public class BasicShooterBehaviour : MonoBehaviour
         }
 	}
 
-    protected void Shoot(ref Transform transform_)
+    protected void Shoot(Transform transform_)
     {
         if (transform_ == null) return;
 
         // Get the bullet from its pool at the mentioned transform.
         PooledObject bulletPO = Bullet.GetComponent<BasicBulletBehaviour>();
-        PooledObject bulletInstance = bulletPO.GetObject();
-        Transform bulletTransform = bulletInstance.transform;
-        bulletTransform.SetParent(_target.transform);
+        PooledObject bulletInstance = bulletPO.GetObject(_target.transform);
         Vector3 spawnPosition = transform_.position;
-        bulletTransform.SetPositionAndRotation(
+        bulletInstance.transform.SetPositionAndRotation(
             new Vector3(spawnPosition.x, spawnPosition.y),
             new Quaternion());
 

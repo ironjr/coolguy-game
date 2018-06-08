@@ -32,7 +32,7 @@ public class EnemySpawner : MonoBehaviour
             _deltaTime -= _updateDelay;
 
             int numObjects = (int)Mathf.Round(_meanSpawnAmount +
-                (float)RandomGenerator.NextGaussianDouble(new System.Random()));
+                (float)RandomDistributionGenerator.NextGaussianDouble(new System.Random()));
 
             GameObject newEnemy;
             for (int i = 0; i < numObjects; ++i)

@@ -49,6 +49,7 @@ public class BasicBulletBehaviour : PooledObject
     public override void OnFetchFromPool()
     {
         _speed = Speed;
+        _flagReflected = false;
         base.OnFetchFromPool();
     }
 

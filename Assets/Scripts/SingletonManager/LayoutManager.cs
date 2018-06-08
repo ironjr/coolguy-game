@@ -3,14 +3,21 @@ using UnityEngine;
 
 public class LayoutManager : Singleton<LayoutManager>
 {
+    public GameObject GameOverUIObject;
     public PooledObject[] DigitObjects;
     public float DigitDistance = 0.6f;
     public Transform ScoreContainerTransform;
-
+    public Transform HighscoreBoardTransform;
+    
     public void DisplayScore(int score)
     {
+        DisplayScore(score, ScoreContainerTransform);
+    }
+
+    public void DisplayScore(int score, Transform container)
+    {
         // Remove current digits from the panel.
-        foreach (Transform child in ScoreContainerTransform)
+        foreach (Transform child in container)
         {
             PooledObject po = child.GetComponent<PooledObject>();
             po.ReturnToPool();
@@ -33,10 +40,16 @@ public class LayoutManager : Singleton<LayoutManager>
         {
             PooledObject digit = DigitObjects[digits[index]].GetObject();
             Transform digitTransform = digit.transform;
-            digitTransform.SetParent(ScoreContainerTransform);
+            digitTransform.SetParent(container);
             digitTransform.localPosition = new Vector3(xOffset, 0);
             xOffset -= DigitDistance;
             ++index;
         }
+    }
+
+    public void DisplayGameOver(uint score, uint highScore)
+    {
+        GameOverUIObject.SetActive(true);
+        ScoreContainerTransform.position = new Vector3(0, 2);
     }
 }

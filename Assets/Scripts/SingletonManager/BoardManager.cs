@@ -283,7 +283,7 @@ public class BoardManager : Singleton<BoardManager>
         float minY = topY + 0.5f * TILE_SIZE;
         float maxY = minY + HEIGHT_BUFFER_TILES * TILE_SIZE;
         int numObjects = (int)Mathf.Round(_meanNumObjects +
-            (float)RandomGenerator.NextGaussianDouble(new System.Random()));
+            (float)RandomDistributionGenerator.NextGaussianDouble(new System.Random()));
 
         // No new object needed to be created. Procedure ends.
         if (numObjects < 0)

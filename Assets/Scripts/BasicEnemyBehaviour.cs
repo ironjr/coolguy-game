@@ -86,7 +86,7 @@ public class BasicEnemyBehaviour : PooledObject
     private void Die(GameObject causedBy)
     {
         // TODO Maybe an animation for dying state?
-        if (causedBy.CompareTag("Player"))
+        if (causedBy.CompareTag("Player") && _gameManager.IsRunning)
         {
             // Add score.
             _gameManager.GainScore(Score);
