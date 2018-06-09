@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
@@ -100,7 +101,7 @@ public class GameManager : Singleton<GameManager>
             _jsonManager.PersonalHighScore = PersonalHighScore;
             _jsonManager.SaveData();
         }
-        _layoutManager.DisplayGameOver(Score, PersonalHighScore);
+        StartCoroutine(WaitedDisplaySummary());
         Debug.Log("Game is over!");
     }
 
@@ -110,5 +111,11 @@ public class GameManager : Singleton<GameManager>
         PersonalHighScore = 0u;
         _jsonManager.PersonalHighScore = 0u;
         _jsonManager.SaveData();
+    }
+
+    public IEnumerator WaitedDisplaySummary()
+    {
+        yield return new WaitForSeconds(0.9f);
+        _layoutManager.DisplayGameOver(Score, PersonalHighScore);
     }
 }

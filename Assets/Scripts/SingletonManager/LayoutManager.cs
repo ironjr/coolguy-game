@@ -4,14 +4,15 @@ using UnityEngine;
 public class LayoutManager : Singleton<LayoutManager>
 {
     public GameObject GameOverUIObject;
+    public GameObject ScoreContainer;
     public PooledObject[] DigitObjects;
     public float DigitDistance = 0.6f;
-    public Transform ScoreContainerTransform;
-    public Transform HighscoreBoardTransform;
-    
+    public Transform SummaryScoreTransform;
+    public Transform SummaryHighscoreTransform;
+
     public void DisplayScore(int score)
     {
-        DisplayScore(score, ScoreContainerTransform);
+        DisplayScore(score, ScoreContainer.transform);
     }
 
     public void DisplayScore(int score, Transform container)
@@ -49,7 +50,9 @@ public class LayoutManager : Singleton<LayoutManager>
 
     public void DisplayGameOver(uint score, uint highScore)
     {
+        ScoreContainer.SetActive(false);
         GameOverUIObject.SetActive(true);
-        ScoreContainerTransform.position = new Vector3(0, 2);
+        DisplayScore((int)score, SummaryScoreTransform);
+        DisplayScore((int)highScore, SummaryHighscoreTransform);
     }
 }

@@ -19,15 +19,22 @@ public class BasicShooterBehaviour : MonoBehaviour
 
     private State _state = State.EnableShoot;
     private GameObject _target;
+    private GameManager _gameManager;
 
 	void Start()
     {
         _fireDelay = 1.0f / FireRate;
         _target = GameObject.FindGameObjectWithTag("Player");
+        _gameManager = GameManager.Instance;
 	}
 	
 	void Update()
     {
+        if (_gameManager.IsOver)
+        {
+            _state = State.DisableShoot;
+        }
+
         switch (_state)
         {
             case State.EnableShoot:

@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4500318013944908}
   - component: {fileID: 212382044545064952}
   - component: {fileID: 95437300789796354}
-  - component: {fileID: 114071703563606200}
   - component: {fileID: 82731900351277226}
   - component: {fileID: 114306476941674218}
+  - component: {fileID: 114689517248774542}
   m_Layer: 14
   m_Name: HitEffect2
   m_TagString: FX
@@ -141,21 +141,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114071703563606200
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1700206021504252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae9ab31f34b20b3418beee5652d39c48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: HitEffect2
-  PooledAmount: 3
-  WillGrow: 1
-  Lifespan: 1
 --- !u!114 &114306476941674218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -169,6 +154,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AudioClipList:
   - {fileID: 8300000, guid: dd2414432fdb73d4eb05d93af0511c57, type: 3}
+--- !u!114 &114689517248774542
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1700206021504252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86f9f7ac1fae62e43a49597e3584c9fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: HitEffect2
+  PooledAmount: 3
+  WillGrow: 1
+  Lifespan: 1
 --- !u!212 &212382044545064952
 SpriteRenderer:
   m_ObjectHideFlags: 1

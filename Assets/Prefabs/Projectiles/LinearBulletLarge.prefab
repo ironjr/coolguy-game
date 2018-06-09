@@ -90,7 +90,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: LinearBulletLarge
-  Parent: {fileID: 0}
   PooledAmount: 10
   WillGrow: 1
   Damage: 3
@@ -113,9 +112,9 @@ MonoBehaviour:
   - {fileID: 21300094, guid: f147c6d86c946d84d9cb83666479c381, type: 3}
   - {fileID: 21300084, guid: f147c6d86c946d84d9cb83666479c381, type: 3}
   HitEffects:
-  - {fileID: 114587856857391750, guid: 15744b97cbd1b7749b396f144058e5ab, type: 2}
-  - {fileID: 114401258678674084, guid: ea8a83a9d861e934c94c696f10990247, type: 2}
-  - {fileID: 114103964923456436, guid: 11994a799725b4b4db8d6c796feca93b, type: 2}
+  - {fileID: 114784859323772618, guid: 15744b97cbd1b7749b396f144058e5ab, type: 2}
+  - {fileID: 114265131434744406, guid: ea8a83a9d861e934c94c696f10990247, type: 2}
+  - {fileID: 114960198769847282, guid: 11994a799725b4b4db8d6c796feca93b, type: 2}
   EquivalentTargetingBullet: {fileID: 114481585228652136, guid: 0cadbd31201a1b1409f36ee867559bca,
     type: 2}
 --- !u!212 &212070455402062282

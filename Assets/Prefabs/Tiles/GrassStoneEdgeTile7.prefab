@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4100270996875602}
   - component: {fileID: 212898650092912962}
+  - component: {fileID: 114088255302039928}
   m_Layer: 8
   m_Name: GrassStoneEdgeTile7
   m_TagString: Tile
@@ -40,6 +41,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114088255302039928
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1766910431218320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e006f1b4f6022c49b65f84f272c17ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: GrassStoneEdgeTile7
+  PooledAmount: 3
+  WillGrow: 1
 --- !u!212 &212898650092912962
 SpriteRenderer:
   m_ObjectHideFlags: 1

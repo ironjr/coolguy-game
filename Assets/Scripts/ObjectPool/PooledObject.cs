@@ -9,9 +9,9 @@
 /// public class SampleObject : PooledObject
 /// {
 ///     // Optional
-///     public void OnInstantiate() { }
-///     public void OnFetchFromPool() { }
-///     public void OnReturnToPool() { }
+///     public override void OnInstantiate() { }
+///     public override void OnFetchFromPool() { }
+///     public override void OnReturnToPool() { }
 /// }
 /// </example>
 public abstract class PooledObject : MonoBehaviour

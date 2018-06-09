@@ -76,6 +76,9 @@ TagManager:
   - name: FX
     uniqueID: 853149579
     locked: 0
+  - name: UI Panel
+    uniqueID: 3780281869
+    locked: 0
   - name: UI
     uniqueID: 2314690617
     locked: 0

@@ -254,7 +254,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: Enemy_HoodElite
-  Parent: {fileID: 0}
   PooledAmount: 3
   WillGrow: 1
   Score: 8

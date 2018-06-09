@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4204009127260974}
   - component: {fileID: 212335412218833398}
   - component: {fileID: 95182799254343270}
-  - component: {fileID: 114375029090395750}
   - component: {fileID: 82232835753650198}
   - component: {fileID: 114006673894935602}
+  - component: {fileID: 114079678235457810}
   m_Layer: 14
   m_Name: HitEffect3
   m_TagString: FX
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AudioClipList:
   - {fileID: 8300000, guid: dd2414432fdb73d4eb05d93af0511c57, type: 3}
---- !u!114 &114375029090395750
+--- !u!114 &114079678235457810
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1742318913076522}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae9ab31f34b20b3418beee5652d39c48, type: 3}
+  m_Script: {fileID: 11500000, guid: 86f9f7ac1fae62e43a49597e3584c9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ID: HitEffect3

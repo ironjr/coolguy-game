@@ -129,13 +129,13 @@ public abstract class BasicSkillBehaviour : PooledObject
     /// Override this to implement pre-modified settings for the
     /// skill instance.
     /// </summary>
-    public virtual void OnActivate() { }
+    protected virtual void OnActivate() { }
 
     /// <summary>
     /// Called when the activation timer expires.
     /// Returns the skill object to its pool.
     /// </summary>
-    protected void Deactivate()
+    public void Deactivate()
     {
         OnDeactivate();
         ReturnToPool();

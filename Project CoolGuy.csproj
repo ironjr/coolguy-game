@@ -306,8 +306,8 @@
     <Compile Include="Assets\Scripts\BasicSkillBehaviour.cs" />
     <Compile Include="Assets\Scripts\CameraShake.cs" />
     <Compile Include="Assets\Scripts\DataStructures\BinaryHeap.cs" />
-    <Compile Include="Assets\Scripts\FixedLifeSpan.cs" />
-    <Compile Include="Assets\Scripts\FixedLifeSpanPooled.cs" />
+    <Compile Include="Assets\Scripts\FixedLifespanAnimation.cs" />
+    <Compile Include="Assets\Scripts\FixedLifespanPO.cs" />
     <Compile Include="Assets\Scripts\GridSystemByFattie\DDOL.cs" />
     <Compile Include="Assets\Scripts\GridSystemByFattie\DevPreload.cs" />
     <Compile Include="Assets\Scripts\LinearBulletBehaviour.cs" />
@@ -322,7 +322,7 @@
     <Compile Include="Assets\Scripts\ResourceManager\StartScreenLoader.cs" />
     <Compile Include="Assets\Scripts\RNG\RandomDistributionGenerator.cs" />
     <Compile Include="Assets\Scripts\RNG\RandomFlip2D.cs" />
-    <Compile Include="Assets\Scripts\SimplePooledObject.cs" />
+    <Compile Include="Assets\Scripts\SimplePO.cs" />
     <Compile Include="Assets\Scripts\Singleton\Singleton.cs" />
     <Compile Include="Assets\Scripts\SingletonManager\BoardManager.cs" />
     <Compile Include="Assets\Scripts\SingletonManager\DeathZone.cs" />

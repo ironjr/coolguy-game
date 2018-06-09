@@ -64,6 +64,20 @@ public class BasicEnemyBehaviour : PooledObject
         }
     }
 
+    public override void OnReturnToPool()
+    {
+        base.OnReturnToPool();
+        PooledObject[] projectilesYetArrived = GetComponentsInChildren<BasicBulletBehaviour>();
+        if (projectilesYetArrived != null)
+        {
+            int len = projectilesYetArrived.Length;
+            for (int i = 0; i < len; ++i)
+            {
+                projectilesYetArrived[i].ReturnToPool();
+            }
+        }
+    }
+
     public void ReceiveDamage(int damage, GameObject causedBy)
     {
         _health -= damage;

@@ -350,14 +350,17 @@ MonoBehaviour:
   _persistent: 0
   DeathZoneBoundaryY: -6.4
   BombingRate: 1
-  CameraShakeRate: 10
+  BombSizeMax: 1.5
+  BombSizeMin: 0.8
+  CameraShakeInterval: 15
+  MinimumShakeInterval: 10
   MaxDelayedKill: 1.6
   XMax: 4.8
   XMin: -4.8
   YMax: -4
   YMin: -8
   Explosions:
-  - {fileID: 114083714205332014, guid: cbbd46469b0aaf6409f4c6136fbe8e40, type: 2}
+  - {fileID: 114299635875881966, guid: cbbd46469b0aaf6409f4c6136fbe8e40, type: 2}
   PitHoles:
   - {fileID: 114438502273300072, guid: cba88ed120782694e8177ed34ada5cb6, type: 2}
   - {fileID: 114646513271484260, guid: 02aaa7bbe84800c4b8c0882cbb36b8f2, type: 2}
@@ -457,11 +460,6 @@ MonoBehaviour:
     LeftRange: {x: -4.3, y: -2.8}
     RightRange: {x: 2.8, y: 4.3}
     ThemeID: 0
-  - Object: {fileID: 0}
-    Weight: 0
-    LeftRange: {x: 0, y: 0}
-    RightRange: {x: 0, y: 0}
-    ThemeID: 0
   LargeObjectsWeight: 2
   ObjectDensity: 1.2
   BoardContainerTransform: {fileID: 0}
@@ -472,7 +470,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1516584319783864}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf00e9e062ef30747b2cb676bbfd6dd4, type: 3}
   m_Name: 

@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4102452293358490}
   - component: {fileID: 212533820352972214}
+  - component: {fileID: 114515919831729514}
   m_Layer: 8
   m_Name: StoneSmallPondTile
   m_TagString: Tile
@@ -40,6 +41,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114515919831729514
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1040771190259402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e006f1b4f6022c49b65f84f272c17ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: StoneSmallPondTile
+  PooledAmount: 3
+  WillGrow: 1
 --- !u!212 &212533820352972214
 SpriteRenderer:
   m_ObjectHideFlags: 1

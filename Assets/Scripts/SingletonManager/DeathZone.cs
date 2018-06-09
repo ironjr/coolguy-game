@@ -6,7 +6,10 @@ public class DeathZone : Singleton<DeathZone>
 {
     public float DeathZoneBoundaryY = -6.4f;
     public float BombingRate = 1.0f;
-    public int CameraShakeRate = 10;
+    public float BombSizeMax = 1.5f;
+    public float BombSizeMin = 0.8f;
+    public int CameraShakeInterval = 15;
+    public int MinimumShakeInterval = 10;
     public float MaxDelayedKill = 1.6f;
     public float XMax = 4.8f;
     public float XMin = -4.8f;
@@ -18,10 +21,11 @@ public class DeathZone : Singleton<DeathZone>
     private float _bombTimer = 0.0f;
     private int _bombCounter;
     private CameraShake _cameraShake;
+    private int _maxShakeInterval;
 
     protected override void OnAwake()
     {
-        _bombCounter = Random.Range(0, 2 * CameraShakeRate);
+        _bombCounter = Random.Range(MinimumShakeInterval, 2 * CameraShakeInterval - MinimumShakeInterval);
         _cameraShake = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShake>();
     }
 	
@@ -31,12 +35,13 @@ public class DeathZone : Singleton<DeathZone>
         _bombTimer += Time.deltaTime;
         if (Random.Range(0, 1.0f / BombingRate) < _bombTimer)
         {
-            GenerateExplosion(new Vector3(1.0f, 1.0f, 1.0f));
             _bombTimer = 0.0f;
+            float bombSize = Random.Range(BombSizeMin, BombSizeMax);
+            GenerateExplosion(new Vector3(bombSize, bombSize, bombSize));
             if (--_bombCounter <= 0)
             {
                 _cameraShake.ShakeCamera();
-                _bombCounter = Random.Range(0, 2 * CameraShakeRate);
+                _bombCounter = Random.Range(MinimumShakeInterval, 2 * CameraShakeInterval - MinimumShakeInterval);
             }
         }
 	}
