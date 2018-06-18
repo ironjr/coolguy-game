@@ -168,7 +168,8 @@ MonoBehaviour:
   ID: HitEffect6
   PooledAmount: 3
   WillGrow: 1
-  Lifespan: 1
+  Lifespan: 0.5
+  AnimationLength: 0.292
 --- !u!212 &212320395268699778
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -318,6 +318,8 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayRandomAudio.cs" />
+    <Compile Include="Assets\Scripts\ResourceManager\EnemySpawnPatternData.cs" />
+    <Compile Include="Assets\Scripts\ResourceManager\EnemySpawnPatternLoader.cs" />
     <Compile Include="Assets\Scripts\ResourceManager\StartScreenData.cs" />
     <Compile Include="Assets\Scripts\ResourceManager\StartScreenLoader.cs" />
     <Compile Include="Assets\Scripts\RNG\RandomDistributionGenerator.cs" />

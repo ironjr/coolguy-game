@@ -97,10 +97,15 @@ public class BasicEnemyBehaviour : PooledObject
         }
     }
 
+    public void Kill(GameObject causedBy)
+    {
+        ReceiveDamage((int)MaxHealth, causedBy);
+    }
+
     private void Die(GameObject causedBy)
     {
         // TODO Maybe an animation for dying state?
-        if (causedBy.CompareTag("Player") && _gameManager.IsRunning)
+        if (causedBy != null && causedBy.CompareTag("Player") && _gameManager.IsRunning)
         {
             // Add score.
             _gameManager.GainScore(Score);

@@ -76,9 +76,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.5
+  m_Radius: 1.6
 --- !u!114 &114193665515201762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,8 +120,10 @@ MonoBehaviour:
   PooledAmount: 1
   WillGrow: 0
   Lifespan: 0.2
-  CooldownTime: 0.25
+  CooldownTime: 0.33
   Elasticity: 2
   IsLeft: 1
-  SwooshFX: {fileID: 114276820142071366, guid: 0b377fce01bc35c4d92ccfb0ad40da7f, type: 2}
+  HitboxDegreeFront: 24
+  HitboxDegreeRear: -22
+  SwooshFX: {fileID: 114522086123079084, guid: 9c1a347016085914288b452fdba12e3c, type: 2}
   ClingFX: {fileID: 114125138590581584, guid: 635b1a064ead5e7469adb8e9d0554fe5, type: 2}

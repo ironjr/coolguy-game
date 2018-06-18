@@ -14,6 +14,7 @@ public class BasicBulletBehaviour : PooledObject
     protected GameObject _origin;
     protected GameObject _target;
     protected bool _flagReflected = false;
+    protected SpriteRenderer _spriteRenderer;
 
     public bool FlagReflected
     {
@@ -26,6 +27,7 @@ public class BasicBulletBehaviour : PooledObject
     void Awake()
     {
         _speed = Speed;
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D other)
@@ -53,7 +55,7 @@ public class BasicBulletBehaviour : PooledObject
         base.OnFetchFromPool();
     }
 
-    public void Set_speed(float speed)
+    public void SetSpeed(float speed)
     {
         _speed = speed;
     }
@@ -82,7 +84,7 @@ public class BasicBulletBehaviour : PooledObject
                 behaviour.SetTarget(_origin);
                 behaviour.SetOrigin(_target);
                 behaviour._flagReflected = true;
-                behaviour.Set_speed(behaviour._speed * elasticity);
+                behaviour.SetSpeed(behaviour._speed * elasticity);
             }
             catch (InvalidCastException) { }
             ReturnToPool();
@@ -98,7 +100,7 @@ public class BasicBulletBehaviour : PooledObject
         float temp = Mathf.Acos(normalizedDirection.x) * 180 / Mathf.PI;
         float angle = normalizedDirection.y >= 0 ? temp : -temp;
         int spriteIndex = ((int)Mathf.Floor(angle / 360.0f * _numSprites + .5f) + _numSprites) % _numSprites;
-        gameObject.GetComponent<SpriteRenderer>().sprite = BulletSprites[spriteIndex];
+        _spriteRenderer.sprite = BulletSprites[spriteIndex];
         return spriteIndex;
     }
 }

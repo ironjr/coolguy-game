@@ -155,7 +155,8 @@ MonoBehaviour:
   ID: HitEffect4
   PooledAmount: 3
   WillGrow: 1
-  Lifespan: 1
+  Lifespan: 0.5
+  AnimationLength: 0.25
 --- !u!114 &114880872501547226
 MonoBehaviour:
   m_ObjectHideFlags: 1

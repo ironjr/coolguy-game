@@ -1422,8 +1422,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f4315d2c8404944a96fbb0c6b99af3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxAmplitude: 0.2
+  MaxAmplitude: 0.1
   BurstDuration: 0.5
+  RotationalShake: 0
   SmoothShaking: 0
   ShakeSmoothness: 1
   SmoothRepositioning: 1

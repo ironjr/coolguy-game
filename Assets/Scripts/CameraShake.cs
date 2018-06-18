@@ -6,6 +6,7 @@ public class CameraShake : MonoBehaviour
 {
     public float MaxAmplitude = 0.2f;
     public float BurstDuration = 0.5f;
+    public bool RotationalShake = false;
     public bool SmoothShaking = false;
     public float ShakeSmoothness = 1.0f;
     public bool SmoothRepositioning = true;
@@ -42,15 +43,31 @@ public class CameraShake : MonoBehaviour
             case State.Idle:
                 break;
             case State.Shaking:
-                Vector2 rotationAmount2D = Random.insideUnitCircle * MaxAmplitude;
-                Quaternion rotation = Quaternion.Euler(new Vector3(rotationAmount2D.x, rotationAmount2D.y));
-                if (SmoothShaking)
+                if (RotationalShake)
                 {
-                    _transform.localRotation = Quaternion.Lerp(_transform.localRotation, rotation, Time.deltaTime * ShakeSmoothness);
+                    Vector2 rotationAmount2D = Random.insideUnitCircle * MaxAmplitude;
+                    Quaternion rotation = Quaternion.Euler(new Vector3(rotationAmount2D.x, rotationAmount2D.y));
+                    if (SmoothShaking)
+                    {
+                        _transform.localRotation = Quaternion.Lerp(_transform.localRotation, rotation, Time.deltaTime * ShakeSmoothness);
+                    }
+                    else
+                    {
+                        _transform.localRotation = rotation;
+                    }
                 }
                 else
                 {
-                    _transform.localRotation = rotation;
+                    Vector2 translationAmount2D = Random.insideUnitCircle * MaxAmplitude;
+                    Vector3 translation = new Vector3(translationAmount2D.x, translationAmount2D.y, _transform.localPosition.z);
+                    if (SmoothShaking)
+                    {
+                        _transform.localPosition = Vector3.Lerp(_transform.localPosition, translation, Time.deltaTime * ShakeSmoothness);
+                    }
+                    else
+                    {
+                        _transform.localPosition = translation;
+                    }
                 }
                 break;
             case State.Repositioning:

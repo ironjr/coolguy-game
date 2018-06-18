@@ -62,7 +62,7 @@ public class DeathZone : Singleton<DeathZone>
         {
             GenerateExplosion(toKill.transform.position, new Vector3(1, 1));
             BasicEnemyBehaviour behaviour = toKill.GetComponent<BasicEnemyBehaviour>();
-            behaviour.ReceiveDamage((int)behaviour.MaxHealth, gameObject);
+            behaviour.Kill(gameObject);
         }
     }
 
