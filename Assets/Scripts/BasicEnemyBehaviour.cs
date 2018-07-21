@@ -3,6 +3,7 @@
 [RequireComponent(typeof(Rigidbody2D))]
 public class BasicEnemyBehaviour : PooledObject
 {
+    public int EnemyID;
     public int Score = 1;
     public uint EnemyLevel = 1u;
     public uint MaxHealth = 1u;

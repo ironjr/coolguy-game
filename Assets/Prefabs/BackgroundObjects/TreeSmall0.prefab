@@ -36,6 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4399651343420146}
   - component: {fileID: 212387487782252878}
+  - component: {fileID: 114826165814425344}
   - component: {fileID: 61327887049387514}
   m_Layer: 13
   m_Name: TreeSmall0
@@ -96,6 +97,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5746207, y: 0.3122059}
   m_EdgeRadius: 0
+--- !u!114 &114826165814425344
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1989508625749404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ffa5488ad2f4594ca705c6a9400bf6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PoolID: TreeSmall0
+  PooledAmount: 3
+  WillGrow: 1
+  Weight: 8
+  Ranges:
+  - {x: -4.42, y: -1.9}
+  - {x: 1.9, y: 4.42}
 --- !u!212 &212387487782252878
 SpriteRenderer:
   m_ObjectHideFlags: 1

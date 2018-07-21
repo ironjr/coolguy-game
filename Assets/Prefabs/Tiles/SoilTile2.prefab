@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4225129898194650}
   - component: {fileID: 212165253734541332}
-  - component: {fileID: 114308055300687996}
+  - component: {fileID: 114776252265273224}
   m_Layer: 8
   m_Name: SoilTile2
   m_TagString: Tile
@@ -41,7 +41,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114308055300687996
+--- !u!114 &114776252265273224
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -49,12 +49,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1715443498768322}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e006f1b4f6022c49b65f84f272c17ef, type: 3}
+  m_Script: {fileID: 11500000, guid: b8f27c81a607a794cb008ad3422311f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: SoilTile2
+  PoolID: SoilTile2
   PooledAmount: 3
   WillGrow: 1
+  Weight: 5
 --- !u!212 &212165253734541332
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -167,10 +167,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f9f7ac1fae62e43a49597e3584c9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: Explosion0
+  PoolID: Explosion0
   PooledAmount: 10
   WillGrow: 1
   Lifespan: 1
+  AnimationLength: 1
 --- !u!212 &212602923774612898
 SpriteRenderer:
   m_ObjectHideFlags: 1

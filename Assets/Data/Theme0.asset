@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a97dd89d981193a4baa774871bcc69d6, type: 3}
+  m_Name: Theme0
+  m_EditorClassIdentifier: 
+  Tiles:
+  - Name: Grass
+    GlobalWeight: 0
+    Tiles:
+    - ID: 0
+      TileObject: {fileID: 114731025671293162, guid: 28772a275a5606546b86855db1bbd560,
+        type: 2}
+    - ID: 1
+      TileObject: {fileID: 114977064745279794, guid: 35a248c1ddde4354b8a0f64bb3074691,
+        type: 2}
+    - ID: 2
+      TileObject: {fileID: 114879149391793336, guid: f38547fe719717d4f8c74e009bd3d267,
+        type: 2}
+    - ID: 3
+      TileObject: {fileID: 114439227597359946, guid: 67a755712e7c07a45884e8f667888c49,
+        type: 2}
+    - ID: 4
+      TileObject: {fileID: 114213559183390116, guid: bec052edc79dbc24484e904d7d1dc258,
+        type: 2}
+  - Name: Stone
+    GlobalWeight: 0
+    Tiles:
+    - ID: 16
+      TileObject: {fileID: 114964005710471864, guid: 8ad7a1a48a229584eaec5ab6bd79e529,
+        type: 2}
+    - ID: 17
+      TileObject: {fileID: 114792032412134142, guid: ed08e5dcfc681e744a181b9601961186,
+        type: 2}
+    - ID: 18
+      TileObject: {fileID: 114694181351412586, guid: 7514c1ee95fa91f47b8256cb64750a49,
+        type: 2}
+    - ID: 19
+      TileObject: {fileID: 114518858387441998, guid: cdc4f5bd3768f214cbff29fdf0569635,
+        type: 2}
+  - Name: GrassStoneEdge
+    GlobalWeight: 0
+    Tiles:
+    - ID: 32
+      TileObject: {fileID: 114873618889479910, guid: 3a4ecb5a2d5a8cb41ab40c935bb33858,
+        type: 2}
+    - ID: 33
+      TileObject: {fileID: 114456525862565846, guid: 11f43dd2fd4ff8447b33bc6772ffd177,
+        type: 2}
+    - ID: 34
+      TileObject: {fileID: 114841509148144866, guid: 4ed716ba1651ed64b97331044ef147ac,
+        type: 2}
+    - ID: 35
+      TileObject: {fileID: 114906157316038910, guid: 94ae60f34d03b054492ab736b055347b,
+        type: 2}
+    - ID: 36
+      TileObject: {fileID: 114217330918665888, guid: 559f4e95c5f025040a4a9fee21970354,
+        type: 2}
+    - ID: 37
+      TileObject: {fileID: 114344182766128708, guid: ea9fb7de4c05bd648a2e6d52ba35f218,
+        type: 2}
+    - ID: 38
+      TileObject: {fileID: 114361174897837232, guid: 1cf6a0c3f53bb424aa49ae03bf326446,
+        type: 2}
+    - ID: 39
+      TileObject: {fileID: 114922923104394390, guid: 09f21430c7307994abab172f1aa51ab2,
+        type: 2}
+  - Name: Soil
+    GlobalWeight: 0
+    Tiles:
+    - ID: 48
+      TileObject: {fileID: 114977830061470490, guid: c49805a48fc20c5448c4aeb15a1cf5f4,
+        type: 2}
+    - ID: 49
+      TileObject: {fileID: 114164487435514568, guid: a165d3eaa9b8da046b37ec0f2c84fc4c,
+        type: 2}
+    - ID: 50
+      TileObject: {fileID: 114776252265273224, guid: 88f83ed7e6167734badf62b4164364b1,
+        type: 2}
+  BGObjects:
+  - Name: Small
+    GlobalWeight: 20
+    BGObjects:
+    - ID: 0
+      BGObject: {fileID: 114758010231242018, guid: 8847aa7daa99a2a4484ca413208d223d,
+        type: 2}
+    - ID: 1
+      BGObject: {fileID: 114345326851948772, guid: a27ada27eb788c64a99916ccf1d43c1c,
+        type: 2}
+    - ID: 2
+      BGObject: {fileID: 114285641008459926, guid: f5c034d8553b775418ea87a04a2e585f,
+        type: 2}
+  - Name: Medium
+    GlobalWeight: 5
+    BGObjects:
+    - ID: 16
+      BGObject: {fileID: 114246311738361896, guid: 9355bd07ecf805d4492dd864c4041a05,
+        type: 2}
+    - ID: 17
+      BGObject: {fileID: 114973876144073490, guid: d0dfebd89587f0142bf731d8af1f7371,
+        type: 2}
+    - ID: 18
+      BGObject: {fileID: 114826165814425344, guid: a7915d81888a97048b5b2858e922d54d,
+        type: 2}
+    - ID: 19
+      BGObject: {fileID: 114392798734556404, guid: b3639ffcd22e89644846a81da2fb0d80,
+        type: 2}
+  - Name: Large
+    GlobalWeight: 2
+    BGObjects:
+    - ID: 32
+      BGObject: {fileID: 114761125543986712, guid: 963b94df454df474ca81c2b8c4e7b2cc,
+        type: 2}
+    - ID: 33
+      BGObject: {fileID: 114521323464018204, guid: 710b8e655f9233a4aa0efb6a0bb7644f,
+        type: 2}
+    - ID: 34
+      BGObject: {fileID: 114386166406775274, guid: c96b7e391091acc4bb902c915b78b779,
+        type: 2}

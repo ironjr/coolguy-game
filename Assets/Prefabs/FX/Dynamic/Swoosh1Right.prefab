@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae9ab31f34b20b3418beee5652d39c48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: Swoosh1Right
+  PoolID: Swoosh1Right
   PooledAmount: 1
   WillGrow: 1
   Lifespan: 0.2

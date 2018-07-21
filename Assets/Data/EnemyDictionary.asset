@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 722ef472ba916774fbd163fa90f6395b, type: 3}
+  m_Name: EnemyDictionary
+  m_EditorClassIdentifier: 
+  Keys: 000000000100000002000000100000001100000012000000200000002100000022000000
+  Values:
+  - {fileID: 114796491111315060, guid: 659487a14fa494f44bd1deb513dda4e3, type: 2}
+  - {fileID: 114912760954957262, guid: faacd057fb3be76409a818163b923a7d, type: 2}
+  - {fileID: 114917310829341192, guid: 8e18bf935b4aaa9488d094051d74019e, type: 2}
+  - {fileID: 114208168562797918, guid: 725bf0e17f3353b42a76ac16c1a28e47, type: 2}
+  - {fileID: 114959695867714684, guid: 48b4d921fba0ce14f856567ca13446cf, type: 2}
+  - {fileID: 114605611438070088, guid: fff02bc6a42dc7f40a47f36211e82eb7, type: 2}
+  - {fileID: 114142644892262408, guid: a00a08ff4ba7bf642a73f23c7a3f9b18, type: 2}
+  - {fileID: 114139499953780980, guid: de4c39272d9aafb4793bc3d013c5d131, type: 2}
+  - {fileID: 114461776210401090, guid: 897b4b813beff9c4dbb0f283459c2988, type: 2}
+  SaveBeforeSerialize: 0

@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f9f7ac1fae62e43a49597e3584c9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: HitEffect6
+  PoolID: HitEffect6
   PooledAmount: 3
   WillGrow: 1
   Lifespan: 0.5

@@ -1,22 +1,26 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour
+public class EnemySpawner : Singleton<EnemySpawner>
 {
+    public EnemyDictionary Enemies;
+    public EnemySpawnPatternData[] Patterns;
+
     public float MinX = -4.0f;
     public float MaxX = 4.0f;
     public float MinY = 9.0f;
     public float MaxY = 16.0f;
     public float SpawnRate = 0.3f;
-    public WeightedGameObject[] Enemies;
 
+    private EnemySpawnPatternData _pattern;
     private float _updateDelay;
     private float _deltaTime = .0f;
     private float _meanSpawnAmount;
-    private static BoardManager _boardManager;
+    private BoardManager _boardManager;
 
     void Awake()
     {
-        _boardManager = transform.parent.GetComponentInChildren<BoardManager>();
+        _boardManager = BoardManager.Instance;
         _updateDelay = BoardManager.TILE_SIZE / BoardManager.TILE_SIZE_PIXEL *
             _boardManager.WalkSpeed;
         _meanSpawnAmount = _updateDelay * SpawnRate;
@@ -31,15 +35,15 @@ public class EnemySpawner : MonoBehaviour
             // Update deltaTime.
             _deltaTime -= _updateDelay;
 
+            // Get a pattern.
             int numObjects = (int)Mathf.Round(_meanSpawnAmount +
                 (float)RandomDistributionGenerator.NextGaussianDouble(new System.Random()));
 
-            GameObject newEnemy;
+            // Instantiate a pattern.
+            PooledObject newEnemy;
             for (int i = 0; i < numObjects; ++i)
             {
-                BasicEnemyBehaviour behaviour = Enemies[GetIndexFromWeightedRandom(Enemies)]
-                    .Object.GetComponent<BasicEnemyBehaviour>();
-                newEnemy = behaviour.GetObject().gameObject;
+                newEnemy = Enemies.Values[Random.Range(0, Enemies.Values.Count)].GetObject();
                 float x = Random.Range(MinX, MaxX);
                 float y = Random.Range(MinY, MaxY);
                 float z = (y - MinY) / 10.0f;
@@ -50,22 +54,9 @@ public class EnemySpawner : MonoBehaviour
         }
 	}
 
-    // Redundant code.
-    private int GetIndexFromWeightedRandom(WeightedGameObject[] list)
+    private void LoadTheme()
     {
-        int len = list.Length;
-        uint sum = 0;
-        for (int i = 0; i < len; ++i)
-        {
-            sum += list[i].Weight;
-        }
-        int random = (int)Random.Range(0, sum);
-
-        int idx;
-        for (idx = 0; random >= 0 && idx < len; ++idx)
-        {
-            random -= (int)list[idx].Weight;
-        }
-        return idx - 1;
+        int themeID = _boardManager.ThemeID;
+        _pattern = Patterns[themeID];
     }
 }

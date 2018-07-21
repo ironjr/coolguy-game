@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfa7dcc913edc546b8f541fd8ae0f3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: TargetingBulletLarge
+  PoolID: TargetingBulletLarge
   PooledAmount: 10
   WillGrow: 1
   Damage: 3

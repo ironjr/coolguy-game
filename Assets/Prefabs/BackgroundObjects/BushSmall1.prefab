@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4286975736953524}
   - component: {fileID: 212110180300571766}
+  - component: {fileID: 114345326851948772}
   m_Layer: 13
   m_Name: BushSmall1
   m_TagString: BackgroundObject
@@ -40,6 +41,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114345326851948772
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1464156928054086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ffa5488ad2f4594ca705c6a9400bf6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PoolID: BushSmall1
+  PooledAmount: 3
+  WillGrow: 1
+  Weight: 10
+  Ranges:
+  - {x: -4.42, y: -1.58}
+  - {x: 1.58, y: 4.42}
 --- !u!212 &212110180300571766
 SpriteRenderer:
   m_ObjectHideFlags: 1

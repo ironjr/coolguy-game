@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c268e972e77d9024d9be87491a539a26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: LinearBulletSmall
+  PoolID: LinearBulletSmall
   PooledAmount: 10
   WillGrow: 1
   Damage: 1

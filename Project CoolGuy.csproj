@@ -300,14 +300,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BackgroundObject.cs" />
     <Compile Include="Assets\Scripts\BasicBulletBehaviour.cs" />
     <Compile Include="Assets\Scripts\BasicEnemyBehaviour.cs" />
     <Compile Include="Assets\Scripts\BasicShooterBehaviour.cs" />
     <Compile Include="Assets\Scripts\BasicSkillBehaviour.cs" />
-    <Compile Include="Assets\Scripts\CameraShake.cs" />
+    <Compile Include="Assets\Scripts\CameraShake\CameraShake.cs" />
     <Compile Include="Assets\Scripts\DataStructures\BinaryHeap.cs" />
     <Compile Include="Assets\Scripts\FixedLifespanAnimation.cs" />
-    <Compile Include="Assets\Scripts\FixedLifespanPO.cs" />
+    <Compile Include="Assets\Scripts\GameEventSystem\GameEvent.cs" />
+    <Compile Include="Assets\Scripts\GameEventSystem\GameEventListener.cs" />
     <Compile Include="Assets\Scripts\GridSystemByFattie\DDOL.cs" />
     <Compile Include="Assets\Scripts\GridSystemByFattie\DevPreload.cs" />
     <Compile Include="Assets\Scripts\LinearBulletBehaviour.cs" />
@@ -318,13 +320,22 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayRandomAudio.cs" />
-    <Compile Include="Assets\Scripts\ResourceManager\EnemySpawnPatternData.cs" />
-    <Compile Include="Assets\Scripts\ResourceManager\EnemySpawnPatternLoader.cs" />
-    <Compile Include="Assets\Scripts\ResourceManager\StartScreenData.cs" />
-    <Compile Include="Assets\Scripts\ResourceManager\StartScreenLoader.cs" />
+    <Compile Include="Assets\Scripts\PooledObjects\FixedLifespanPO.cs" />
+    <Compile Include="Assets\Scripts\PooledObjects\SimplePO.cs" />
+    <Compile Include="Assets\Scripts\PooledObjects\WeightedPO.cs" />
     <Compile Include="Assets\Scripts\RNG\RandomDistributionGenerator.cs" />
     <Compile Include="Assets\Scripts\RNG\RandomFlip2D.cs" />
-    <Compile Include="Assets\Scripts\SimplePO.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EnemyDictionary.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EnemyDictionaryEditor.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EnemySpawnPatternData.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EnemySpawnPatternDataEditor.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\FloatVariable.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\IntVariable.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\SerializableDictionary.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\StartScreenData.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\StartScreenDataEditor.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\ThemeData.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\ThemeDataEditor.cs" />
     <Compile Include="Assets\Scripts\Singleton\Singleton.cs" />
     <Compile Include="Assets\Scripts\SingletonManager\BoardManager.cs" />
     <Compile Include="Assets\Scripts\SingletonManager\DeathZone.cs" />
@@ -337,7 +348,6 @@
     <Compile Include="Assets\Scripts\TargetingBulletBehaviour.cs" />
     <Compile Include="Assets\Scripts\Timer\SimpleTimer.cs" />
     <Compile Include="Assets\Scripts\UIAnimation\Blink.cs" />
-    <Compile Include="Assets\Scripts\WeightedGameObject.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

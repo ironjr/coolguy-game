@@ -20,7 +20,7 @@ public abstract class PooledObject : MonoBehaviour
     /// Pool ID for searching the pool.
     /// </summary>
     [SerializeField]
-    public string ID;
+    public string PoolID;
 
     /// <summary>
     /// Default pool size when generated.
@@ -44,10 +44,10 @@ public abstract class PooledObject : MonoBehaviour
     {
         get
         {
-            ObjectPool pool = PoolManager.Instance.GetPool(ID);
+            ObjectPool pool = PoolManager.Instance.GetPool(PoolID);
             if (pool == null)
             {
-                pool = PoolManager.Instance.NewPool(ID, gameObject, PooledAmount, WillGrow);
+                pool = PoolManager.Instance.NewPool(PoolID, gameObject, PooledAmount, WillGrow);
             }
             return pool;
         }

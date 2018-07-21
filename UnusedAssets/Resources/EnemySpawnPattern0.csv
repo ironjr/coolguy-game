@@ -1,0 +1,27 @@
+9,,,,
+"id	",name,,,
+0,RoundHead,,,
+1,SquareHead,,,
+2,Hood,,,
+16,RoundHeadVeteran,,,
+17,SquareHeadVeteran,,,
+18,HoodVeteran,,,
+32,RoundHeadElite,,,
+33,SquareHeadElite,,,
+34,HoodElite,,,
+pattern-level,1,4,,
+enemy-id,spawn-x,spawn-y,wait,wait-amount
+0,3,0,FALSE,
+0,-3,0,FALSE,
+1,1,0,FALSE,
+1,-1,0,TRUE,0.5
+pattern-level,1,2,,
+enemy-id,spawn-x,spawn-y,wait,wait-amount
+2,2,0,FALSE,
+2,-2,0,TRUE,0.5
+pattern-level,2,4,,
+enemy-id,spawn-x,spawn-y,wait,wait-amount
+16,3,0,FALSE,
+16,-3,0,FALSE,
+17,1,0,FALSE,
+17,-1,0,TRUE,0.5

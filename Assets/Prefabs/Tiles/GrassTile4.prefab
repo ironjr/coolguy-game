@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4871444054106656}
   - component: {fileID: 212696720575502672}
-  - component: {fileID: 114683071035139554}
+  - component: {fileID: 114213559183390116}
   m_Layer: 8
   m_Name: GrassTile4
   m_TagString: Tile
@@ -41,7 +41,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114683071035139554
+--- !u!114 &114213559183390116
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -49,12 +49,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1799698722881732}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e006f1b4f6022c49b65f84f272c17ef, type: 3}
+  m_Script: {fileID: 11500000, guid: b8f27c81a607a794cb008ad3422311f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: GrassTile4
+  PoolID: GrassTile4
   PooledAmount: 3
   WillGrow: 1
+  Weight: 5
 --- !u!212 &212696720575502672
 SpriteRenderer:
   m_ObjectHideFlags: 1

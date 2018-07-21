@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f28f0e3aec1e4e34ca7704b6e3b91e18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: SwingRight
+  PoolID: SwingRight
   PooledAmount: 1
   WillGrow: 0
   Lifespan: 0.2

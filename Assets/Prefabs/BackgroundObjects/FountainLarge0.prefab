@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4010485838775270}
   - component: {fileID: 212638226833847778}
+  - component: {fileID: 114386166406775274}
   - component: {fileID: 61224217343033180}
   m_Layer: 0
   m_Name: FountainLarge0
@@ -66,6 +67,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 1.2760112}
   m_EdgeRadius: 0
+--- !u!114 &114386166406775274
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1608559526579574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ffa5488ad2f4594ca705c6a9400bf6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PoolID: FountainLarge0
+  PooledAmount: 1
+  WillGrow: 1
+  Weight: 0
+  Ranges:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
 --- !u!212 &212638226833847778
 SpriteRenderer:
   m_ObjectHideFlags: 1

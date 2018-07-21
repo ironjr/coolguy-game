@@ -380,87 +380,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _persistent: 0
+  StartScreens:
+  - {fileID: 11400000, guid: 7e705fa62c3653e4e90418a7a1430996, type: 2}
+  Themes:
+  - {fileID: 11400000, guid: d127a5cbeda3f134491ed33191a3be6a, type: 2}
+  ThemeID: 0
   WalkSpeed: 30
-  GrassTiles:
-  - Object: {fileID: 1356311119360420, guid: 28772a275a5606546b86855db1bbd560, type: 2}
-    Weight: 30
-  - Object: {fileID: 1787713183221538, guid: 35a248c1ddde4354b8a0f64bb3074691, type: 2}
-    Weight: 5
-  - Object: {fileID: 1761408444834262, guid: f38547fe719717d4f8c74e009bd3d267, type: 2}
-    Weight: 5
-  - Object: {fileID: 1219559968010802, guid: 67a755712e7c07a45884e8f667888c49, type: 2}
-    Weight: 5
-  - Object: {fileID: 1799698722881732, guid: bec052edc79dbc24484e904d7d1dc258, type: 2}
-    Weight: 5
-  StoneTiles:
-  - Object: {fileID: 1532449781025068, guid: 8ad7a1a48a229584eaec5ab6bd79e529, type: 2}
-    Weight: 20
-  - Object: {fileID: 1917078171659776, guid: ed08e5dcfc681e744a181b9601961186, type: 2}
-    Weight: 5
-  - Object: {fileID: 1073237736713488, guid: 7514c1ee95fa91f47b8256cb64750a49, type: 2}
-    Weight: 5
-  - Object: {fileID: 1040771190259402, guid: cdc4f5bd3768f214cbff29fdf0569635, type: 2}
-    Weight: 1
-  GrassStoneBoundaryTiles:
-  - {fileID: 1079413338121684, guid: 3a4ecb5a2d5a8cb41ab40c935bb33858, type: 2}
-  - {fileID: 1322752465022070, guid: 11f43dd2fd4ff8447b33bc6772ffd177, type: 2}
-  - {fileID: 1766818585069118, guid: 4ed716ba1651ed64b97331044ef147ac, type: 2}
-  - {fileID: 1263075193739778, guid: 94ae60f34d03b054492ab736b055347b, type: 2}
-  - {fileID: 1379861386009998, guid: 559f4e95c5f025040a4a9fee21970354, type: 2}
-  - {fileID: 1917782579321794, guid: ea9fb7de4c05bd648a2e6d52ba35f218, type: 2}
-  - {fileID: 1602353665846986, guid: 1cf6a0c3f53bb424aa49ae03bf326446, type: 2}
-  - {fileID: 1766910431218320, guid: 09f21430c7307994abab172f1aa51ab2, type: 2}
-  SmallObjects:
-  - Object: {fileID: 1421406447797484, guid: 8847aa7daa99a2a4484ca413208d223d, type: 2}
-    Weight: 8
-    LeftRange: {x: -4.5, y: -1.6}
-    RightRange: {x: 1.6, y: 4.5}
-    ThemeID: 0
-  - Object: {fileID: 1464156928054086, guid: a27ada27eb788c64a99916ccf1d43c1c, type: 2}
-    Weight: 10
-    LeftRange: {x: -4.5, y: -1.6}
-    RightRange: {x: 1.6, y: 4.5}
-    ThemeID: 0
-  - Object: {fileID: 1819850253724130, guid: f5c034d8553b775418ea87a04a2e585f, type: 2}
-    Weight: 12
-    LeftRange: {x: -4.5, y: -1.6}
-    RightRange: {x: 1.6, y: 4.5}
-    ThemeID: 0
-  SmallObjectsWeight: 20
-  MediumObjects:
-  - Object: {fileID: 1180523190996996, guid: 9355bd07ecf805d4492dd864c4041a05, type: 2}
-    Weight: 12
-    LeftRange: {x: -4.2, y: -1.8}
-    RightRange: {x: 1.8, y: 4.2}
-    ThemeID: 0
-  - Object: {fileID: 1001023890699924, guid: d0dfebd89587f0142bf731d8af1f7371, type: 2}
-    Weight: 12
-    LeftRange: {x: -4.2, y: -1.8}
-    RightRange: {x: 1.8, y: 4.2}
-    ThemeID: 0
-  - Object: {fileID: 1989508625749404, guid: a7915d81888a97048b5b2858e922d54d, type: 2}
-    Weight: 8
-    LeftRange: {x: -4.2, y: -1.8}
-    RightRange: {x: 1.8, y: 4.2}
-    ThemeID: 0
-  - Object: {fileID: 1816490717886394, guid: b3639ffcd22e89644846a81da2fb0d80, type: 2}
-    Weight: 0
-    LeftRange: {x: -1.8, y: -1}
-    RightRange: {x: 1, y: 1.8}
-    ThemeID: 0
-  MediumObjectsWeight: 5
-  LargeObjects:
-  - Object: {fileID: 1960835242815166, guid: 963b94df454df474ca81c2b8c4e7b2cc, type: 2}
-    Weight: 10
-    LeftRange: {x: -4.3, y: -2.4}
-    RightRange: {x: 2.4, y: 4.3}
-    ThemeID: 0
-  - Object: {fileID: 1664073814036768, guid: 710b8e655f9233a4aa0efb6a0bb7644f, type: 2}
-    Weight: 10
-    LeftRange: {x: -4.3, y: -2.8}
-    RightRange: {x: 2.8, y: 4.3}
-    ThemeID: 0
-  LargeObjectsWeight: 2
   ObjectDensity: 1.2
   BoardContainerTransform: {fileID: 0}
   BackgroundObjectContainerTransform: {fileID: 0}
@@ -475,30 +400,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf00e9e062ef30747b2cb676bbfd6dd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _persistent: 1
+  Enemies: {fileID: 11400000, guid: 1c2874207e9e8ee43a9f9b5e420ccdeb, type: 2}
+  Patterns:
+  - {fileID: 11400000, guid: b97550fac5664ed49a9eeb2ec5274421, type: 2}
   MinX: -4
   MaxX: 4
   MinY: 9
   MaxY: 16
   SpawnRate: 0.5
-  Enemies:
-  - Object: {fileID: 1736171578592892, guid: 659487a14fa494f44bd1deb513dda4e3, type: 2}
-    Weight: 20
-  - Object: {fileID: 1951396179003102, guid: faacd057fb3be76409a818163b923a7d, type: 2}
-    Weight: 20
-  - Object: {fileID: 1949433120635844, guid: 725bf0e17f3353b42a76ac16c1a28e47, type: 2}
-    Weight: 5
-  - Object: {fileID: 1445341277410694, guid: 48b4d921fba0ce14f856567ca13446cf, type: 2}
-    Weight: 5
-  - Object: {fileID: 1365816071884558, guid: a00a08ff4ba7bf642a73f23c7a3f9b18, type: 2}
-    Weight: 1
-  - Object: {fileID: 1309654149454948, guid: de4c39272d9aafb4793bc3d013c5d131, type: 2}
-    Weight: 1
-  - Object: {fileID: 1415280490918934, guid: 8e18bf935b4aaa9488d094051d74019e, type: 2}
-    Weight: 7
-  - Object: {fileID: 1106871430596876, guid: fff02bc6a42dc7f40a47f36211e82eb7, type: 2}
-    Weight: 2
-  - Object: {fileID: 1513505471897856, guid: 897b4b813beff9c4dbb0f283459c2988, type: 2}
-    Weight: 1
 --- !u!114 &114935941188107770
 MonoBehaviour:
   m_ObjectHideFlags: 1

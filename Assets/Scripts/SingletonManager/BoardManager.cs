@@ -1,52 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
-
-[Serializable]
-public class IntRow
-{
-    public int[] Data;
-
-    public int this[int x]
-    {
-        get
-        {
-            return Data[x];
-        }
-        set
-        {
-            Data[x] = value;
-        }
-    }
-}
-
-[Serializable]
-public class BackgroundObject : WeightedGameObject
-{
-    public Vector2 LeftRange;
-    public Vector2 RightRange;
-    public int ThemeID = 0;
-
-    public float GetRandomPosition()
-    {
-        float min = LeftRange.x;
-        float leftBound = LeftRange.y;
-        float rightBase = RightRange.x;
-        float max = leftBound + RightRange.y - rightBase;
-        float pos = UnityEngine.Random.Range(min, max);
-        if (pos < leftBound) return pos;
-        else return (pos - leftBound + rightBase);
-    }
-}
-
-[Serializable]
-public class StartScreenObject
-{
-    public int ObjectID;
-    public Vector3 Position;
-    public bool FlipX;
-    public bool FlipY;
-}
 
 public class BoardManager : Singleton<BoardManager>
 {
@@ -56,18 +10,10 @@ public class BoardManager : Singleton<BoardManager>
     public static readonly float TILE_SIZE = .8f;
     public static readonly uint TILE_SIZE_PIXEL = 32;
 
+    public StartScreenData[] StartScreens;
+    public ThemeData[] Themes;
+    public int ThemeID = 0;
     public float WalkSpeed = 30.0f;
-
-    public WeightedGameObject[] GrassTiles; // 0
-    public WeightedGameObject[] StoneTiles; // 1
-    public GameObject[] GrassStoneBoundaryTiles; // 2
-
-    public BackgroundObject[] SmallObjects; // 0
-    public uint SmallObjectsWeight;
-    public BackgroundObject[] MediumObjects; // 1
-    public uint MediumObjectsWeight;
-    public BackgroundObject[] LargeObjects; // 2
-    public uint LargeObjectsWeight;
 
     // Number of background objects in a line of tiles.
     public float ObjectDensity = 1.2f;
@@ -75,16 +21,16 @@ public class BoardManager : Singleton<BoardManager>
     public Transform BoardContainerTransform;
     public Transform BackgroundObjectContainerTransform;
     //public Transform FXContainerTransform;
-
+    
     private static readonly float PIXEL_SIZE = TILE_SIZE / TILE_SIZE_PIXEL;
     private static readonly float MIN_TOP_TILE_Y = 8.8f;
     private static readonly float MIN_BOTTOM_OBJECT_Y = -13.0f;
-    private static readonly int MAX_SORTING_LAYER_INDEX = Int16.MaxValue;
+    private static readonly int MAX_SORTING_LAYER_INDEX = System.Int16.MaxValue;
 
     // This comparer makes the _boardObjects list a minheap.
-    private class GameObjectYComparer : IComparer<GameObject>
+    private class PooledObjectYComparer : IComparer<PooledObject>
     {
-        public int Compare(GameObject a, GameObject b)
+        public int Compare(PooledObject a, PooledObject b)
         {
             float aY = a.transform.position.y;
             float bY = b.transform.position.y;
@@ -94,49 +40,44 @@ public class BoardManager : Singleton<BoardManager>
         }
     }
 
-    private GameObject[][] _board;
-    private BinaryHeap<GameObject> _boardObjects;
-    private GameObjectYComparer _gameObjectYComparer;
-    private GameManager _gameManager;
-    private uint[] _objectTypeWeights;
+    private StartScreenData _startScreen;
+    private ThemeData _theme;
+    private PooledObject[][] _board;
+    private BinaryHeap<PooledObject> _boardObjects;
+    private PooledObjectYComparer _gameObjectYComparer;
     private uint _topTileIndex;
     private float _pixelWalkDelay;
     private float _deltaTime = .0f;
     private float _meanNumObjects;
     private int _nextBGOSortingLayerIndex;
 
+    private WeightedPO _leftEdge;
+    private WeightedPO _rightEdge;
+
     void Awake()
     {
         _pixelWalkDelay = 1.0f / WalkSpeed;
-        _objectTypeWeights = new uint[3] { SmallObjectsWeight, MediumObjectsWeight, LargeObjectsWeight };
         _meanNumObjects = HEIGHT_BUFFER_TILES * ObjectDensity;
-        _gameManager = GameManager.Instance;
+
+        // Load data from asset database.
+        LoadTheme(ThemeID);
     }
 
     // Assume these scripts have been executed: GameManager::Start
     void Start()
     {
-        StartScreenData startScreenData = new StartScreenData();
-        StartScreenLoader.LoadScreen(_gameManager.CurrentThemeID, ref startScreenData);
-        if (startScreenData == null)
-        {
-            Debug.LogError("Start screen data is not well prepared.");
-            Application.Quit();
-        }
-
         // Initiate the start screen tileset.
         int halfWidth = (WIDTH - 1) / 2;
         int halfHeight = (HEIGHT - 1) / 2;
-        GameObject tile;
-        _board = new GameObject[HEIGHT][];
+        PooledObject tile;
+        _board = new PooledObject[HEIGHT][];
 		for (int i = halfHeight; i >= -halfHeight; --i)
         {
-            _board[i + halfHeight] = new GameObject[WIDTH];
+            _board[i + halfHeight] = new PooledObject[WIDTH];
             for (int j = -halfWidth; j <= halfWidth; ++j)
             {
-                tile = Instantiate(
-                    GetTileFromID(startScreenData.Tiles[halfHeight - i][j + halfWidth]),
-                    BoardContainerTransform);
+                tile = GetTileByID(_startScreen.Tiles[halfHeight - i][j + halfWidth])
+                    .GetObject(BoardContainerTransform);
                 tile.transform.SetPositionAndRotation(
                     new Vector3(j * TILE_SIZE, i * TILE_SIZE),
                     new Quaternion());
@@ -146,20 +87,19 @@ public class BoardManager : Singleton<BoardManager>
         _topTileIndex = (uint)HEIGHT - 1;
 
         // Initiate the start screen objects.
-        _gameObjectYComparer = new GameObjectYComparer();
-        _boardObjects = new BinaryHeap<GameObject>(_gameObjectYComparer);
+        _gameObjectYComparer = new PooledObjectYComparer();
+        _boardObjects = new BinaryHeap<PooledObject>(_gameObjectYComparer);
         _nextBGOSortingLayerIndex = MAX_SORTING_LAYER_INDEX;
-        BinaryHeap<GameObject> sortingHeap = new BinaryHeap<GameObject>(_gameObjectYComparer);
-        if (startScreenData.BackgroundObjects != null)
+        BinaryHeap<PooledObject> sortingHeap = new BinaryHeap<PooledObject>(_gameObjectYComparer);
+        if (_startScreen.BGObjects != null)
         {
-            GameObject backgroundObject;
-            int len = startScreenData.BackgroundObjects.Length;
+            PooledObject backgroundObject;
+            int len = _startScreen.BGObjects.Count;
             for (int i = 0; i < len; ++i)
             {
-                StartScreenObject tempObject = startScreenData.BackgroundObjects[i];
-                backgroundObject = Instantiate(
-                    GetBackgroundObjectFromID(tempObject.ObjectID),
-                    BackgroundObjectContainerTransform);
+                StartScreenObject tempObject = _startScreen.BGObjects[i];
+                backgroundObject = GetBackgroundObjectFromID(tempObject.ObjectID)
+                    .GetObject(BackgroundObjectContainerTransform);
                 backgroundObject.transform.SetPositionAndRotation(
                     tempObject.Position,
                     Quaternion.Euler(new Vector3(tempObject.FlipX ? 1 : 0, tempObject.FlipY ? 1 : 0)));
@@ -199,6 +139,10 @@ public class BoardManager : Singleton<BoardManager>
             }
 
             // Move all effects one pixel downward.
+        _startScreen = StartScreens[ThemeID];
+        _theme = Themes[ThemeID];
+        _leftEdge = _theme.GetTileByID(36);
+        _rightEdge = _theme.GetTileByID(32);
             GameObject[] fxObjects = GameObject.FindGameObjectsWithTag("FX");
             if (fxObjects != null)
             {
@@ -219,12 +163,23 @@ public class BoardManager : Singleton<BoardManager>
         }
     }
 
+    private void LoadTheme(int themeID)
+    {
+        _startScreen = StartScreens[themeID];
+        _theme = Themes[themeID];
+
+        // TODO state-specific.
+        _leftEdge = _theme.GetTileByID(36);
+        _rightEdge = _theme.GetTileByID(32);
+    }
+
     private void GenerateNewTerrain(float topY)
     {
+        
         uint top = _topTileIndex;
         int halfWidth = (WIDTH - 1) / 2;
-        GameObject newTile;
-        GameObject oldTile;
+        PooledObject newTile;
+        PooledObject oldTile;
         for (int i = 0; i < HEIGHT_BUFFER_TILES; ++i)
         {
             top = (uint)((top + 1) % HEIGHT);
@@ -233,30 +188,30 @@ public class BoardManager : Singleton<BoardManager>
             {
                 if (j < -2 || j > 2)
                 {
-                    newTile = Instantiate(PickRandomTile(0),
-                        BoardContainerTransform);
+                    newTile = _theme.Tiles[0].GetRandomObject()
+                        .GetObject(BoardContainerTransform);
                 }
                 else if (j == -2)
                 {
-                    newTile = Instantiate(GrassStoneBoundaryTiles[4],
-                        BoardContainerTransform);
+                    newTile = _leftEdge
+                        .GetObject(BoardContainerTransform);
                 }
                 else if (j == 2)
                 {
-                    newTile = Instantiate(GrassStoneBoundaryTiles[0],
-                        BoardContainerTransform);
+                    newTile = _rightEdge
+                        .GetObject(BoardContainerTransform);
                 }
                 else
                 {
-                    newTile = Instantiate(PickRandomTile(1),
-                        BoardContainerTransform);
+                    newTile = _theme.Tiles[1].GetRandomObject()
+                        .GetObject(BoardContainerTransform);
                 }
                 newTile.transform.SetPositionAndRotation(
                     new Vector3(j * TILE_SIZE, topY),
                     new Quaternion());
                 oldTile = _board[top][j + halfWidth];
                 _board[top][j + halfWidth] = newTile;
-                Destroy(oldTile);
+                oldTile.ReturnToPool();
             }
         }
         _topTileIndex = top;
@@ -265,13 +220,13 @@ public class BoardManager : Singleton<BoardManager>
     private void GenerateNewObject(float topY)
     {
         // Remove offscreen objects.
-        GameObject bottomObject;
+        PooledObject bottomObject;
         while (!_boardObjects.IsEmpty())
         {
             bottomObject = _boardObjects.Peek();
             if (bottomObject.transform.position.y < MIN_BOTTOM_OBJECT_Y)
             {
-                Destroy(_boardObjects.RemoveRoot());
+                _boardObjects.RemoveRoot().ReturnToPool();
             }
             else
             {
@@ -292,51 +247,19 @@ public class BoardManager : Singleton<BoardManager>
         }
 
         // There exist some background objects to be created.
-        GameObject newObject;
-        BinaryHeap<GameObject> sortingHeap = new BinaryHeap<GameObject>(_gameObjectYComparer);
+        BackgroundObject newObject;
+        BinaryHeap<PooledObject> sortingHeap = new BinaryHeap<PooledObject>(_gameObjectYComparer);
         for (int i = 0; i < numObjects; ++i)
         {
-            int objectType = GetIndexFromWeightedRandom(_objectTypeWeights);
-            int objectIndex;
-            float randY;
-            switch (objectType)
-            {
-                case 0: // SmallObjects
-                    objectIndex = GetIndexFromWeightedRandom(SmallObjects);
-                    newObject = Instantiate(
-                        SmallObjects[objectIndex].Object,
-                        BackgroundObjectContainerTransform);
-                    randY = UnityEngine.Random.Range(minY, maxY);
-                    newObject.transform.SetPositionAndRotation(
-                        new Vector3(SmallObjects[objectIndex].GetRandomPosition(), randY),
-                        Quaternion.Euler(new Vector3(0, 180.0f * UnityEngine.Random.Range(0, 2), 0)));
-                    sortingHeap.Insert(newObject);
-                    break;
-                case 1: // MediumObjects
-                    objectIndex = GetIndexFromWeightedRandom(MediumObjects);
-                    newObject = Instantiate(
-                        MediumObjects[objectIndex].Object,
-                        BackgroundObjectContainerTransform);
-                    randY = UnityEngine.Random.Range(minY, maxY);
-                    newObject.transform.SetPositionAndRotation(
-                        new Vector3(MediumObjects[objectIndex].GetRandomPosition(), randY),
-                        Quaternion.Euler(new Vector3(0, 180.0f * UnityEngine.Random.Range(0, 2), 0)));
-                    sortingHeap.Insert(newObject);
-                    break;
-                case 2: // LargeObjects
-                    objectIndex = GetIndexFromWeightedRandom(LargeObjects);
-                    newObject = Instantiate(
-                        LargeObjects[objectIndex].Object,
-                        BackgroundObjectContainerTransform);
-                    randY = UnityEngine.Random.Range(minY, maxY);
-                    newObject.transform.SetPositionAndRotation(
-                        new Vector3(LargeObjects[objectIndex].GetRandomPosition(), randY),
-                        Quaternion.Euler(new Vector3(0, 180.0f * UnityEngine.Random.Range(0, 2), 0)));
-                    sortingHeap.Insert(newObject);
-                    break;
-                default:
-                    break;
-            }
+            newObject = (BackgroundObject)_theme.GetRandomBGObject()
+                .GetObject(BackgroundObjectContainerTransform);
+
+            float randY = UnityEngine.Random.Range(minY, maxY);
+            newObject.transform.SetPositionAndRotation(
+                new Vector3(newObject.GetRandomPosition(), randY),
+                Quaternion.Euler(new Vector3(0, 180.0f * UnityEngine.Random.Range(0, 2), 0)));
+
+            sortingHeap.Insert(newObject);
         }
 
         // Maximum sorting layer index is going to be occupied. Should
@@ -347,8 +270,8 @@ public class BoardManager : Singleton<BoardManager>
                 int index;
                 int len = _boardObjects.Count;
                 int lim = MAX_SORTING_LAYER_INDEX - len;
-                GameObject backgroundObject;
-                BinaryHeap<GameObject> newBoardObject = new BinaryHeap<GameObject>(_gameObjectYComparer);
+                PooledObject backgroundObject;
+                BinaryHeap<PooledObject> newBoardObject = new BinaryHeap<PooledObject>(_gameObjectYComparer);
                 for (index = MAX_SORTING_LAYER_INDEX; index > lim; --index)
                 {
                     backgroundObject = _boardObjects.RemoveRoot();
@@ -366,7 +289,7 @@ public class BoardManager : Singleton<BoardManager>
         {
             int index;
             int lim = _nextBGOSortingLayerIndex - sortingHeap.Count;
-            GameObject backgroundObject;
+            PooledObject backgroundObject;
             for (index = _nextBGOSortingLayerIndex; index > lim; --index)
             {
                 backgroundObject = sortingHeap.RemoveRoot();
@@ -377,56 +300,18 @@ public class BoardManager : Singleton<BoardManager>
         }
     }
 
-    private GameObject GetTileFromID(int id)
+    private PooledObject GetTileByID(int id)
     {
         int type = id >> 4;
         int num = id & 0xf;
-        switch (type)
-        {
-            case 0: // Grass
-                return GrassTiles[num].Object;
-            case 1: // Stone
-                return StoneTiles[num].Object;
-            case 2: // Grass-Stone boundary
-                return GrassStoneBoundaryTiles[num];
-            default:
-                return null;
-        }
+        return _theme.Tiles[type].Tiles[num].TileObject;
     }
 
-    private GameObject GetBackgroundObjectFromID(int id)
+    private PooledObject GetBackgroundObjectFromID(int id)
     {
         int type = id >> 4;
         int num = id & 0xf;
-        switch (type)
-        {
-            case 0: // SmallObjects
-                return SmallObjects[num].Object;
-            case 1: // MediumObjects
-                return MediumObjects[num].Object;
-            case 2: // LargeObjects
-                return LargeObjects[num].Object;
-            default:
-                return null;
-        }
-    }
-
-    private GameObject PickRandomTile(int type)
-    {
-        int index;
-        switch (type)
-        {
-            case 0: // Grass
-                index = GetIndexFromWeightedRandom(GrassTiles);
-                return GrassTiles[index].Object;
-            case 1: // Stone
-                index = GetIndexFromWeightedRandom(StoneTiles);
-                return StoneTiles[index].Object;
-            case 2: // Grass-Stone boundary
-                return null;
-            default:
-                return null;
-        }
+        return _theme.BGObjects[type].BGObjects[num].BGObject;
     }
 
     private int GetIndexFromWeightedRandom(uint[] weights)
@@ -443,24 +328,6 @@ public class BoardManager : Singleton<BoardManager>
         for (idx = 0; random >= 0 && idx < len; ++idx)
         {
             random -= (int)weights[idx];
-        }
-        return idx - 1;
-    }
-
-    private int GetIndexFromWeightedRandom(WeightedGameObject[] list)
-    {
-        int len = list.Length;
-        uint sum = 0;
-        for (int i = 0; i < len; ++i)
-        {
-            sum += list[i].Weight;
-        }
-        int random = (int)UnityEngine.Random.Range(0, sum);
-
-        int idx;
-        for (idx = 0; random >= 0 && idx < len; ++idx)
-        {
-            random -= (int)list[idx].Weight;
         }
         return idx - 1;
     }

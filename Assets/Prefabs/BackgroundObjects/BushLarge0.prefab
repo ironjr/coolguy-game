@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4696416466710422}
   - component: {fileID: 212800448673383366}
+  - component: {fileID: 114246311738361896}
   - component: {fileID: 61808999048276854}
   m_Layer: 13
   m_Name: BushLarge0
@@ -66,6 +67,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.6847174}
   m_EdgeRadius: 0
+--- !u!114 &114246311738361896
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1180523190996996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ffa5488ad2f4594ca705c6a9400bf6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PoolID: BushLarge0
+  PooledAmount: 3
+  WillGrow: 1
+  Weight: 12
+  Ranges:
+  - {x: -4.48, y: -1.67}
+  - {x: 1.67, y: 4.48}
 --- !u!212 &212800448673383366
 SpriteRenderer:
   m_ObjectHideFlags: 1

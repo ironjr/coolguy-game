@@ -153,9 +153,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa41f295b3d0b948baae921a291869f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: Enemy_SquareHeadElite
+  PoolID: Enemy_SquareHeadElite
   PooledAmount: 3
   WillGrow: 1
+  EnemyID: 33
   Score: 5
   EnemyLevel: 1
   MaxHealth: 9

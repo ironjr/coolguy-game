@@ -36,6 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4070504282799176}
   - component: {fileID: 212886532956055616}
+  - component: {fileID: 114521323464018204}
   - component: {fileID: 61809435669583588}
   m_Layer: 13
   m_Name: Tree1
@@ -96,6 +97,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5816224, y: 1.0109739}
   m_EdgeRadius: 0
+--- !u!114 &114521323464018204
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1664073814036768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ffa5488ad2f4594ca705c6a9400bf6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PoolID: Tree1
+  PooledAmount: 2
+  WillGrow: 1
+  Weight: 10
+  Ranges:
+  - {x: -5, y: -3}
+  - {x: 3, y: 5}
 --- !u!212 &212886532956055616
 SpriteRenderer:
   m_ObjectHideFlags: 1

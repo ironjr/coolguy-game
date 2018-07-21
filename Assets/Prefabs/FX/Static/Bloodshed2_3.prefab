@@ -52,8 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae9ab31f34b20b3418beee5652d39c48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: Bloodshed2_3
-  Parent: {fileID: 0}
+  PoolID: Bloodshed2_3
   PooledAmount: 3
   WillGrow: 1
   Lifespan: 12
