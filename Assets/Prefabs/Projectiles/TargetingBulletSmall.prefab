@@ -93,7 +93,7 @@ MonoBehaviour:
   PooledAmount: 10
   WillGrow: 1
   Damage: 1
-  Speed: 5
+  Speed: 7.5
   BulletSprites:
   - {fileID: 21300016, guid: f147c6d86c946d84d9cb83666479c381, type: 3}
   - {fileID: 21300012, guid: f147c6d86c946d84d9cb83666479c381, type: 3}

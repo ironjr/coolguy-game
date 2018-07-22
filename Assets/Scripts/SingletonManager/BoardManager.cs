@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class BoardManager : Singleton<BoardManager>
@@ -7,7 +6,7 @@ public class BoardManager : Singleton<BoardManager>
     public static readonly int WIDTH = 13;
     public static readonly int HEIGHT = 27;
     public static readonly int HEIGHT_BUFFER_TILES = 3;
-    public static readonly float TILE_SIZE = .8f;
+    public static readonly float TILE_SIZE = .799f;
     public static readonly uint TILE_SIZE_PIXEL = 32;
 
     public StartScreenData[] StartScreens;

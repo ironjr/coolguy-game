@@ -4,7 +4,7 @@ using UnityEngine;
 public class BasicBulletBehaviour : PooledObject
 {
     public int Damage = 1;
-    public float Speed = 5.0f;
+    public float Speed = 10.0f;
     public Sprite[] BulletSprites;
     public PooledObject[] HitEffects;
     public PooledObject EquivalentTargetingBullet;

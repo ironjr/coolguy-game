@@ -63,7 +63,12 @@ public class GameManager : Singleton<GameManager>
                 {
                     Application.Quit();
                 }
-                bool restart = Input.GetKey(KeyCode.R);
+                bool restart = false;
+#if UNITY_EDITOR || UNITY_STANDALONE
+                restart = Input.GetKey(KeyCode.R);
+#elif UNITY_ANDROID
+                restart = Input.touchCount > 0;
+#endif
                 if (restart)
                 {
                     RestartGame();

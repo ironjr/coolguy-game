@@ -12,9 +12,10 @@ public class BackgroundObject : WeightedPO
             float[] leftBound = new float[len--];
             leftBound[0] = 0.0f;
             float size = 0.0f;
+            float interval;
             for (int i = 0; i < len; ++i)
             {
-                float interval = Ranges[i].y - Ranges[i].x;
+                interval = Ranges[i].y - Ranges[i].x;
                 if (interval < 0)
                 {
                     Debug.LogError("Range of a BackgroundObject " + i +
@@ -24,6 +25,15 @@ public class BackgroundObject : WeightedPO
                 leftBound[i + 1] = leftBound[i] + interval;
                 size += interval;
             }
+            interval = Ranges[len].y - Ranges[len].x;
+            if (interval < 0)
+            {
+                Debug.LogError("Range of a BackgroundObject " + len +
+                    "is misspecified.");
+                return 0.0f;
+            }
+            size += interval;
+
             float pos = Random.Range(0, size);
 
             // Do simple linear search. Since the number of ranges will not

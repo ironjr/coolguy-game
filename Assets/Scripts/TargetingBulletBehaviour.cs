@@ -13,6 +13,11 @@ public class TargetingBulletBehaviour : BasicBulletBehaviour
 
     void Update()
     {
+        //if (!_target.activeInHierarchy)
+        //{
+        //    _target = null;
+        //}
+
         Vector3 bulletPos = transform.position;
         Quaternion bulletRot = transform.rotation;
         Vector3 targetPos = _target.transform.position;
@@ -27,7 +32,7 @@ public class TargetingBulletBehaviour : BasicBulletBehaviour
         if (dist > DISCRETE_MOVEMENT_THRESHOLD)
         {
             // Setup translational movement.
-            float step = Speed * Time.deltaTime;
+            float step = _speed * Time.deltaTime;
             //transform.position = Vector3.MoveTowards(bulletPos, targetPos, step);
             Vector3 stepDir = (Quaternion.AngleAxis(stepAngle, Vector3.forward) * Vector3.right).normalized;
             transform.position = bulletPos + (stepDir * step);
@@ -35,7 +40,7 @@ public class TargetingBulletBehaviour : BasicBulletBehaviour
         else
         {
             // Setup translational movement.
-            float step = Speed * Time.deltaTime;
+            float step = _speed * Time.deltaTime;
             //transform.position = Vector3.MoveTowards(bulletPos, targetPos, step);
             transform.position = bulletPos + (targetDir * step);
         }

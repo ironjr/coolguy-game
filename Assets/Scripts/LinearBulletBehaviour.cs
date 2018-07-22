@@ -17,7 +17,7 @@ public class LinearBulletBehaviour : BasicBulletBehaviour
         SetSpriteByDirection(_direction);
 
         // Setup translational movement.
-        float step = Speed * Time.deltaTime;
+        float step = _speed * Time.deltaTime;
         transform.position = bulletPos + (_direction * step);
 	}
 

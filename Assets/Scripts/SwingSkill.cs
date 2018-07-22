@@ -2,7 +2,7 @@
 
 public class SwingSkill : BasicSkillBehaviour
 {
-    public float Elasticity = 2.0f;
+    public float Elasticity = 3.0f;
     public bool IsLeft = true;
     public float HitboxDegreeFront = 33.0f;
     public float HitboxDegreeRear = -22.0f;
@@ -31,6 +31,8 @@ public class SwingSkill : BasicSkillBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         GameObject go = other.gameObject;
+
+        // Reflect
         if (go.CompareTag("Projectile"))
         {
             Transform tf = go.transform;
