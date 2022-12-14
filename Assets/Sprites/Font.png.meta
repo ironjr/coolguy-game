@@ -1,93 +1,255 @@
 fileFormatVersion: 2
 guid: 60bafeba1b4dae74c952db22cca5dab5
-timeCreated: 1527016923
-licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: Font_A
-    21300002: Font_a_small
-    21300004: Font_B
-    21300006: Font_b_small
-    21300008: Font_C
-    21300010: Font_c_small
-    21300012: Font_D
-    21300014: Font_d_small
-    21300016: Font_E
-    21300018: Font_e_small
-    21300020: Font_F
-    21300022: Font_f_small
-    21300024: Font_G
-    21300026: Font_g_small
-    21300028: Font_H
-    21300030: Font_h_small
-    21300032: Font_I
-    21300034: Font_J
-    21300036: Font_j_small
-    21300038: Font_K
-    21300040: Font_k_small
-    21300042: Font_L
-    21300044: Font_M
-    21300046: Font_0
-    21300048: Font_1
-    21300050: Font_2
-    21300052: Font_N
-    21300054: Font_n_small
-    21300056: Font_O
-    21300058: Font_o_small
-    21300060: Font_P
-    21300062: Font_p_small
-    21300064: Font_Q
-    21300066: Font_q_small
-    21300068: Font_R
-    21300070: Font_r_small
-    21300072: Font_S
-    21300074: Font_colon
-    21300076: Font_T
-    21300078: Font_t_small
-    21300080: Font_U
-    21300082: Font_u_small
-    21300084: Font_V
-    21300086: Font_v_small
-    21300088: Font_W
-    21300090: Font_X
-    21300092: Font_x_small
-    21300094: Font_Y
-    21300096: Font_y_small
-    21300098: Font_Z
-    21300100: Font_z_small
-    21300102: Font_question_mark
-    21300104: Font_inverse_question_mark
-    21300106: Font_hash
-    21300108: Font_dash
-    21300110: Font_3
-    21300112: Font_6
-    21300114: Font_4
-    21300116: Font_7
-    21300118: Font_9
-    21300120: Font_5
-    21300122: Font_8
-    21300124: Font_m_small
-    21300126: Font_l_small
-    21300128: Font_i_small
-    21300130: Font_semicolon
-    21300132: Font_apostrophe
-    21300134: Font_s_small
-    21300136: Font_w_small
-    21300138: Font_underscore
-    21300140: Font_down_arrow
-    21300142: Font_inverted_exclamation_mark
-    21300144: Font_exclamation_mark
-    21300146: Font_comma
-    21300148: Font_period
-    21300150: Font_single_quote
-    21300152: Font_double_quote
-    21300154: Panel_0
-    21300156: Panel_1
-    21300158: Panel_2
-    21300160: Panel_4
-    21300162: Panel_3
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Font_A
+  - first:
+      213: 21300002
+    second: Font_a_small
+  - first:
+      213: 21300004
+    second: Font_B
+  - first:
+      213: 21300006
+    second: Font_b_small
+  - first:
+      213: 21300008
+    second: Font_C
+  - first:
+      213: 21300010
+    second: Font_c_small
+  - first:
+      213: 21300012
+    second: Font_D
+  - first:
+      213: 21300014
+    second: Font_d_small
+  - first:
+      213: 21300016
+    second: Font_E
+  - first:
+      213: 21300018
+    second: Font_e_small
+  - first:
+      213: 21300020
+    second: Font_F
+  - first:
+      213: 21300022
+    second: Font_f_small
+  - first:
+      213: 21300024
+    second: Font_G
+  - first:
+      213: 21300026
+    second: Font_g_small
+  - first:
+      213: 21300028
+    second: Font_H
+  - first:
+      213: 21300030
+    second: Font_h_small
+  - first:
+      213: 21300032
+    second: Font_I
+  - first:
+      213: 21300034
+    second: Font_J
+  - first:
+      213: 21300036
+    second: Font_j_small
+  - first:
+      213: 21300038
+    second: Font_K
+  - first:
+      213: 21300040
+    second: Font_k_small
+  - first:
+      213: 21300042
+    second: Font_L
+  - first:
+      213: 21300044
+    second: Font_M
+  - first:
+      213: 21300046
+    second: Font_0
+  - first:
+      213: 21300048
+    second: Font_1
+  - first:
+      213: 21300050
+    second: Font_2
+  - first:
+      213: 21300052
+    second: Font_N
+  - first:
+      213: 21300054
+    second: Font_n_small
+  - first:
+      213: 21300056
+    second: Font_O
+  - first:
+      213: 21300058
+    second: Font_o_small
+  - first:
+      213: 21300060
+    second: Font_P
+  - first:
+      213: 21300062
+    second: Font_p_small
+  - first:
+      213: 21300064
+    second: Font_Q
+  - first:
+      213: 21300066
+    second: Font_q_small
+  - first:
+      213: 21300068
+    second: Font_R
+  - first:
+      213: 21300070
+    second: Font_r_small
+  - first:
+      213: 21300072
+    second: Font_S
+  - first:
+      213: 21300074
+    second: Font_colon
+  - first:
+      213: 21300076
+    second: Font_T
+  - first:
+      213: 21300078
+    second: Font_t_small
+  - first:
+      213: 21300080
+    second: Font_U
+  - first:
+      213: 21300082
+    second: Font_u_small
+  - first:
+      213: 21300084
+    second: Font_V
+  - first:
+      213: 21300086
+    second: Font_v_small
+  - first:
+      213: 21300088
+    second: Font_W
+  - first:
+      213: 21300090
+    second: Font_X
+  - first:
+      213: 21300092
+    second: Font_x_small
+  - first:
+      213: 21300094
+    second: Font_Y
+  - first:
+      213: 21300096
+    second: Font_y_small
+  - first:
+      213: 21300098
+    second: Font_Z
+  - first:
+      213: 21300100
+    second: Font_z_small
+  - first:
+      213: 21300102
+    second: Font_question_mark
+  - first:
+      213: 21300104
+    second: Font_inverse_question_mark
+  - first:
+      213: 21300106
+    second: Font_hash
+  - first:
+      213: 21300108
+    second: Font_dash
+  - first:
+      213: 21300110
+    second: Font_3
+  - first:
+      213: 21300112
+    second: Font_6
+  - first:
+      213: 21300114
+    second: Font_4
+  - first:
+      213: 21300116
+    second: Font_7
+  - first:
+      213: 21300118
+    second: Font_9
+  - first:
+      213: 21300120
+    second: Font_5
+  - first:
+      213: 21300122
+    second: Font_8
+  - first:
+      213: 21300124
+    second: Font_m_small
+  - first:
+      213: 21300126
+    second: Font_l_small
+  - first:
+      213: 21300128
+    second: Font_i_small
+  - first:
+      213: 21300130
+    second: Font_semicolon
+  - first:
+      213: 21300132
+    second: Font_apostrophe
+  - first:
+      213: 21300134
+    second: Font_s_small
+  - first:
+      213: 21300136
+    second: Font_w_small
+  - first:
+      213: 21300138
+    second: Font_underscore
+  - first:
+      213: 21300140
+    second: Font_down_arrow
+  - first:
+      213: 21300142
+    second: Font_inverted_exclamation_mark
+  - first:
+      213: 21300144
+    second: Font_exclamation_mark
+  - first:
+      213: 21300146
+    second: Font_comma
+  - first:
+      213: 21300148
+    second: Font_period
+  - first:
+      213: 21300150
+    second: Font_single_quote
+  - first:
+      213: 21300152
+    second: Font_double_quote
+  - first:
+      213: 21300154
+    second: Panel_0
+  - first:
+      213: 21300156
+    second: Panel_1
+  - first:
+      213: 21300158
+    second: Panel_2
+  - first:
+      213: 21300160
+    second: Panel_4
+  - first:
+      213: 21300162
+    second: Panel_3
   externalObjects: {}
-  serializedVersion: 4
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -105,6 +267,10 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -114,8 +280,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -127,18 +293,25 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
-  - buildTarget: DefaultTexturePlatform
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -148,7 +321,9 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: Standalone
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -158,7 +333,9 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: iPhone
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -168,7 +345,9 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: Android
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -178,6 +357,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -195,6 +375,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_a_small
       rect:
@@ -209,6 +396,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_B
       rect:
@@ -223,6 +417,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_b_small
       rect:
@@ -237,6 +438,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_C
       rect:
@@ -251,6 +459,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_c_small
       rect:
@@ -265,6 +480,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_D
       rect:
@@ -279,6 +501,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_d_small
       rect:
@@ -293,6 +522,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_E
       rect:
@@ -307,6 +543,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_e_small
       rect:
@@ -321,6 +564,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 23305410000000000800000000000000
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_F
       rect:
@@ -335,6 +585,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 43305410000000000800000000000000
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_f_small
       rect:
@@ -349,6 +606,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 63305410000000000800000000000000
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_G
       rect:
@@ -363,6 +627,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 83305410000000000800000000000000
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_g_small
       rect:
@@ -377,6 +648,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a3305410000000000800000000000000
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_H
       rect:
@@ -391,6 +669,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c3305410000000000800000000000000
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_h_small
       rect:
@@ -405,6 +690,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e3305410000000000800000000000000
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_I
       rect:
@@ -419,6 +711,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 04305410000000000800000000000000
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_J
       rect:
@@ -433,6 +732,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 24305410000000000800000000000000
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_j_small
       rect:
@@ -447,6 +753,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 44305410000000000800000000000000
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_K
       rect:
@@ -461,6 +774,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 64305410000000000800000000000000
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_k_small
       rect:
@@ -475,6 +795,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 84305410000000000800000000000000
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_L
       rect:
@@ -489,6 +816,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a4305410000000000800000000000000
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_M
       rect:
@@ -503,6 +837,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c4305410000000000800000000000000
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_0
       rect:
@@ -517,6 +858,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e4305410000000000800000000000000
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_1
       rect:
@@ -531,6 +879,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 05305410000000000800000000000000
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_2
       rect:
@@ -545,6 +900,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 25305410000000000800000000000000
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_N
       rect:
@@ -559,6 +921,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 45305410000000000800000000000000
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_n_small
       rect:
@@ -573,6 +942,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 65305410000000000800000000000000
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_O
       rect:
@@ -587,6 +963,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 85305410000000000800000000000000
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_o_small
       rect:
@@ -601,6 +984,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a5305410000000000800000000000000
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_P
       rect:
@@ -615,6 +1005,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c5305410000000000800000000000000
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_p_small
       rect:
@@ -629,6 +1026,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e5305410000000000800000000000000
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_Q
       rect:
@@ -643,6 +1047,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 06305410000000000800000000000000
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_q_small
       rect:
@@ -657,6 +1068,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 26305410000000000800000000000000
+      internalID: 21300066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_R
       rect:
@@ -671,6 +1089,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 46305410000000000800000000000000
+      internalID: 21300068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_r_small
       rect:
@@ -685,6 +1110,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 66305410000000000800000000000000
+      internalID: 21300070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_S
       rect:
@@ -699,6 +1131,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 86305410000000000800000000000000
+      internalID: 21300072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_colon
       rect:
@@ -713,6 +1152,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a6305410000000000800000000000000
+      internalID: 21300074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_T
       rect:
@@ -727,6 +1173,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c6305410000000000800000000000000
+      internalID: 21300076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_t_small
       rect:
@@ -741,6 +1194,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e6305410000000000800000000000000
+      internalID: 21300078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_U
       rect:
@@ -755,6 +1215,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 07305410000000000800000000000000
+      internalID: 21300080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_u_small
       rect:
@@ -769,6 +1236,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 27305410000000000800000000000000
+      internalID: 21300082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_V
       rect:
@@ -783,6 +1257,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 47305410000000000800000000000000
+      internalID: 21300084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_v_small
       rect:
@@ -797,6 +1278,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 67305410000000000800000000000000
+      internalID: 21300086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_W
       rect:
@@ -811,6 +1299,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 87305410000000000800000000000000
+      internalID: 21300088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_X
       rect:
@@ -825,6 +1320,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a7305410000000000800000000000000
+      internalID: 21300090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_x_small
       rect:
@@ -839,6 +1341,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c7305410000000000800000000000000
+      internalID: 21300092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_Y
       rect:
@@ -853,6 +1362,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e7305410000000000800000000000000
+      internalID: 21300094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_y_small
       rect:
@@ -867,6 +1383,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 08305410000000000800000000000000
+      internalID: 21300096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_Z
       rect:
@@ -881,6 +1404,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 28305410000000000800000000000000
+      internalID: 21300098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_z_small
       rect:
@@ -895,6 +1425,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 48305410000000000800000000000000
+      internalID: 21300100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_question_mark
       rect:
@@ -909,6 +1446,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 68305410000000000800000000000000
+      internalID: 21300102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_inverse_question_mark
       rect:
@@ -923,6 +1467,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 88305410000000000800000000000000
+      internalID: 21300104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_hash
       rect:
@@ -937,6 +1488,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a8305410000000000800000000000000
+      internalID: 21300106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_dash
       rect:
@@ -951,6 +1509,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c8305410000000000800000000000000
+      internalID: 21300108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_3
       rect:
@@ -965,6 +1530,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e8305410000000000800000000000000
+      internalID: 21300110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_6
       rect:
@@ -979,6 +1551,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 09305410000000000800000000000000
+      internalID: 21300112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_4
       rect:
@@ -993,6 +1572,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 29305410000000000800000000000000
+      internalID: 21300114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_7
       rect:
@@ -1007,6 +1593,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 49305410000000000800000000000000
+      internalID: 21300116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_9
       rect:
@@ -1021,6 +1614,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 69305410000000000800000000000000
+      internalID: 21300118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_5
       rect:
@@ -1035,6 +1635,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 89305410000000000800000000000000
+      internalID: 21300120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_8
       rect:
@@ -1049,6 +1656,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a9305410000000000800000000000000
+      internalID: 21300122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_m_small
       rect:
@@ -1063,6 +1677,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c9305410000000000800000000000000
+      internalID: 21300124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_l_small
       rect:
@@ -1077,6 +1698,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e9305410000000000800000000000000
+      internalID: 21300126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_i_small
       rect:
@@ -1091,6 +1719,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0a305410000000000800000000000000
+      internalID: 21300128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_semicolon
       rect:
@@ -1105,6 +1740,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2a305410000000000800000000000000
+      internalID: 21300130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_apostrophe
       rect:
@@ -1119,6 +1761,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4a305410000000000800000000000000
+      internalID: 21300132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_s_small
       rect:
@@ -1133,6 +1782,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6a305410000000000800000000000000
+      internalID: 21300134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_w_small
       rect:
@@ -1147,6 +1803,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8a305410000000000800000000000000
+      internalID: 21300136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_underscore
       rect:
@@ -1161,6 +1824,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: aa305410000000000800000000000000
+      internalID: 21300138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_down_arrow
       rect:
@@ -1175,6 +1845,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ca305410000000000800000000000000
+      internalID: 21300140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_inverted_exclamation_mark
       rect:
@@ -1189,6 +1866,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ea305410000000000800000000000000
+      internalID: 21300142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_exclamation_mark
       rect:
@@ -1203,6 +1887,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0b305410000000000800000000000000
+      internalID: 21300144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_comma
       rect:
@@ -1217,6 +1908,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2b305410000000000800000000000000
+      internalID: 21300146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_period
       rect:
@@ -1231,6 +1929,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4b305410000000000800000000000000
+      internalID: 21300148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_single_quote
       rect:
@@ -1245,6 +1950,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6b305410000000000800000000000000
+      internalID: 21300150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Font_double_quote
       rect:
@@ -1259,6 +1971,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8b305410000000000800000000000000
+      internalID: 21300152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Panel_0
       rect:
@@ -1273,6 +1992,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ab305410000000000800000000000000
+      internalID: 21300154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Panel_1
       rect:
@@ -1287,6 +2013,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: cb305410000000000800000000000000
+      internalID: 21300156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Panel_2
       rect:
@@ -1301,6 +2034,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: eb305410000000000800000000000000
+      internalID: 21300158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Panel_4
       rect:
@@ -1315,6 +2055,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0c305410000000000800000000000000
+      internalID: 21300160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Panel_3
       rect:
@@ -1329,9 +2076,109 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2c305410000000000800000000000000
+      internalID: 21300162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Font_z_small: 21300100
+      Font_m_small: 21300124
+      Font_0: 21300046
+      Font_a_small: 21300002
+      Font_r_small: 21300070
+      Font_down_arrow: 21300140
+      Panel_3: 21300162
+      Font_2: 21300050
+      Font_p_small: 21300062
+      Font_f_small: 21300022
+      Font_semicolon: 21300130
+      Font_Q: 21300064
+      Font_period: 21300148
+      Font_underscore: 21300138
+      Font_single_quote: 21300150
+      Font_j_small: 21300036
+      Font_E: 21300016
+      Font_k_small: 21300040
+      Font_L: 21300042
+      Font_5: 21300120
+      Font_W: 21300088
+      Font_q_small: 21300066
+      Font_6: 21300112
+      Font_U: 21300080
+      Font_x_small: 21300092
+      Font_M: 21300044
+      Font_P: 21300060
+      Font_hash: 21300106
+      Font_3: 21300110
+      Font_comma: 21300146
+      Font_u_small: 21300082
+      Font_question_mark: 21300102
+      Font_J: 21300034
+      Font_dash: 21300108
+      Font_7: 21300116
+      Font_double_quote: 21300152
+      Font_H: 21300028
+      Panel_0: 21300154
+      Font_i_small: 21300128
+      Font_n_small: 21300054
+      Font_1: 21300048
+      Panel_1: 21300156
+      Font_o_small: 21300058
+      Font_b_small: 21300006
+      Font_G: 21300024
+      Font_y_small: 21300096
+      Font_V: 21300084
+      Font_F: 21300020
+      Font_v_small: 21300086
+      Font_s_small: 21300134
+      Font_Y: 21300094
+      Font_inverse_question_mark: 21300104
+      Panel_2: 21300158
+      Font_R: 21300068
+      Font_B: 21300004
+      Font_I: 21300032
+      Font_d_small: 21300014
+      Panel_4: 21300160
+      Font_S: 21300072
+      Font_A: 21300000
+      Font_colon: 21300074
+      Font_inverted_exclamation_mark: 21300142
+      Font_X: 21300090
+      Font_l_small: 21300126
+      Font_N: 21300052
+      Font_apostrophe: 21300132
+      Font_8: 21300122
+      Font_g_small: 21300026
+      Font_K: 21300038
+      Font_4: 21300114
+      Font_e_small: 21300018
+      Font_c_small: 21300010
+      Font_D: 21300012
+      Font_O: 21300056
+      Font_C: 21300008
+      Font_T: 21300076
+      Font_h_small: 21300030
+      Font_exclamation_mark: 21300144
+      Font_Z: 21300098
+      Font_9: 21300118
+      Font_w_small: 21300136
+      Font_t_small: 21300078
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

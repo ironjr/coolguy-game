@@ -1,41 +1,99 @@
 fileFormatVersion: 2
 guid: dcd127b37aae8504695219373765a6f7
-timeCreated: 1526133686
-licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: Explosion_1_0
-    21300002: Explosion_1_1
-    21300004: Explosion_1_2
-    21300006: Explosion_1_3
-    21300008: Explosion_1_4
-    21300010: Explosion_1_5
-    21300012: Explosion_0_0
-    21300014: Explosion_0_1
-    21300016: Explosion_0_2
-    21300018: Explosion_0_3
-    21300020: Explosion_0_4
-    21300022: Explosion_0_5
-    21300024: Explosion_2_0
-    21300026: Explosion_2_1
-    21300028: Explosion_2_2
-    21300030: Explosion_2_3
-    21300032: Explosion_2_4
-    21300034: Explosion_2_5
-    21300036: Pit_0
-    21300038: Pit_1
-    21300040: Pit_2
-    21300042: Pit_3
-    21300044: Pit_4
-    21300046: Pit_5
-    21300048: Pit_0_Mask
-    21300050: Pit_1_mask
-    21300052: Pit_2_Mask
-    21300054: Pit_3_Mask
-    21300056: Pit_4_Mask
-    21300058: Pit_5_Mask
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Explosion_1_0
+  - first:
+      213: 21300002
+    second: Explosion_1_1
+  - first:
+      213: 21300004
+    second: Explosion_1_2
+  - first:
+      213: 21300006
+    second: Explosion_1_3
+  - first:
+      213: 21300008
+    second: Explosion_1_4
+  - first:
+      213: 21300010
+    second: Explosion_1_5
+  - first:
+      213: 21300012
+    second: Explosion_0_0
+  - first:
+      213: 21300014
+    second: Explosion_0_1
+  - first:
+      213: 21300016
+    second: Explosion_0_2
+  - first:
+      213: 21300018
+    second: Explosion_0_3
+  - first:
+      213: 21300020
+    second: Explosion_0_4
+  - first:
+      213: 21300022
+    second: Explosion_0_5
+  - first:
+      213: 21300024
+    second: Explosion_2_0
+  - first:
+      213: 21300026
+    second: Explosion_2_1
+  - first:
+      213: 21300028
+    second: Explosion_2_2
+  - first:
+      213: 21300030
+    second: Explosion_2_3
+  - first:
+      213: 21300032
+    second: Explosion_2_4
+  - first:
+      213: 21300034
+    second: Explosion_2_5
+  - first:
+      213: 21300036
+    second: Pit_0
+  - first:
+      213: 21300038
+    second: Pit_1
+  - first:
+      213: 21300040
+    second: Pit_2
+  - first:
+      213: 21300042
+    second: Pit_3
+  - first:
+      213: 21300044
+    second: Pit_4
+  - first:
+      213: 21300046
+    second: Pit_5
+  - first:
+      213: 21300048
+    second: Pit_0_Mask
+  - first:
+      213: 21300050
+    second: Pit_1_mask
+  - first:
+      213: 21300052
+    second: Pit_2_Mask
+  - first:
+      213: 21300054
+    second: Pit_3_Mask
+  - first:
+      213: 21300056
+    second: Pit_4_Mask
+  - first:
+      213: 21300058
+    second: Pit_5_Mask
   externalObjects: {}
-  serializedVersion: 4
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -53,6 +111,10 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -62,8 +124,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -75,18 +137,25 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 25
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
-  - buildTarget: DefaultTexturePlatform
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -96,7 +165,9 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: Standalone
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -106,7 +177,9 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: iPhone
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -116,7 +189,9 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: Android
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -126,6 +201,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -143,6 +219,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Explosion_0_1
       rect:
@@ -157,6 +240,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Explosion_0_2
       rect:
@@ -171,6 +261,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Explosion_0_3
       rect:
@@ -185,6 +282,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 23305410000000000800000000000000
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Explosion_0_4
       rect:
@@ -199,6 +303,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 43305410000000000800000000000000
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Explosion_0_5
       rect:
@@ -213,6 +324,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 63305410000000000800000000000000
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Explosion_1_0
       rect:
@@ -227,6 +345,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Explosion_1_1
       rect:
@@ -241,6 +366,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Explosion_1_2
       rect:
@@ -255,6 +387,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Explosion_1_3
       rect:
@@ -269,6 +408,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Explosion_1_4
       rect:
@@ -283,6 +429,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Explosion_1_5
       rect:
@@ -297,6 +450,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Explosion_2_0
       rect:
@@ -311,6 +471,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 83305410000000000800000000000000
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Explosion_2_1
       rect:
@@ -325,6 +492,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a3305410000000000800000000000000
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Explosion_2_2
       rect:
@@ -339,6 +513,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c3305410000000000800000000000000
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Explosion_2_3
       rect:
@@ -353,6 +534,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e3305410000000000800000000000000
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Explosion_2_4
       rect:
@@ -367,6 +555,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 04305410000000000800000000000000
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Explosion_2_5
       rect:
@@ -381,6 +576,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 24305410000000000800000000000000
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pit_0
       rect:
@@ -395,6 +597,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 44305410000000000800000000000000
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pit_1
       rect:
@@ -409,6 +618,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 64305410000000000800000000000000
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pit_2
       rect:
@@ -423,6 +639,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 84305410000000000800000000000000
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pit_3
       rect:
@@ -437,6 +660,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a4305410000000000800000000000000
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pit_4
       rect:
@@ -451,6 +681,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c4305410000000000800000000000000
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pit_5
       rect:
@@ -465,6 +702,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e4305410000000000800000000000000
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pit_0_Mask
       rect:
@@ -479,6 +723,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 05305410000000000800000000000000
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pit_1_mask
       rect:
@@ -493,6 +744,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 25305410000000000800000000000000
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pit_2_Mask
       rect:
@@ -507,6 +765,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 45305410000000000800000000000000
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pit_3_Mask
       rect:
@@ -521,6 +786,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 65305410000000000800000000000000
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pit_4_Mask
       rect:
@@ -535,6 +807,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 85305410000000000800000000000000
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pit_5_Mask
       rect:
@@ -549,9 +828,57 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a5305410000000000800000000000000
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Explosion_0_0: 21300012
+      Explosion_2_1: 21300026
+      Pit_5: 21300046
+      Explosion_2_2: 21300028
+      Explosion_2_0: 21300024
+      Pit_3: 21300042
+      Pit_3_Mask: 21300054
+      Explosion_0_1: 21300014
+      Explosion_0_5: 21300022
+      Explosion_2_4: 21300032
+      Pit_0: 21300036
+      Explosion_2_5: 21300034
+      Pit_2_Mask: 21300052
+      Explosion_0_2: 21300016
+      Explosion_0_3: 21300018
+      Explosion_1_4: 21300008
+      Explosion_2_3: 21300030
+      Pit_1_mask: 21300050
+      Explosion_1_1: 21300002
+      Pit_4_Mask: 21300056
+      Explosion_1_2: 21300004
+      Explosion_1_3: 21300006
+      Pit_4: 21300044
+      Pit_5_Mask: 21300058
+      Explosion_1_0: 21300000
+      Explosion_0_4: 21300020
+      Pit_1: 21300038
+      Explosion_1_5: 21300010
+      Pit_0_Mask: 21300048
+      Pit_2: 21300040
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

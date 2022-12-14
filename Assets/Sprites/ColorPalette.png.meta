@@ -1,75 +1,201 @@
 fileFormatVersion: 2
 guid: b1aa13425a315e844a92b88dbc383963
-timeCreated: 1528473415
-licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: ColorPalette_0
-    21300002: ColorPalette_1
-    21300004: ColorPalette_2
-    21300006: ColorPalette_3
-    21300008: ColorPalette_4
-    21300010: ColorPalette_5
-    21300012: ColorPalette_6
-    21300014: ColorPalette_7
-    21300016: ColorPalette_8
-    21300018: ColorPalette_9
-    21300020: ColorPalette_10
-    21300022: ColorPalette_11
-    21300024: ColorPalette_12
-    21300026: ColorPalette_13
-    21300028: ColorPalette_14
-    21300030: ColorPalette_15
-    21300032: ColorPalette_16
-    21300034: ColorPalette_17
-    21300036: ColorPalette_18
-    21300038: ColorPalette_19
-    21300040: ColorPalette_20
-    21300042: ColorPalette_21
-    21300044: ColorPalette_22
-    21300046: ColorPalette_23
-    21300048: ColorPalette_24
-    21300050: ColorPalette_25
-    21300052: ColorPalette_26
-    21300054: ColorPalette_27
-    21300056: ColorPalette_28
-    21300058: ColorPalette_29
-    21300060: ColorPalette_30
-    21300062: ColorPalette_31
-    21300064: ColorPalette_32
-    21300066: ColorPalette_33
-    21300068: ColorPalette_34
-    21300070: ColorPalette_35
-    21300072: ColorPalette_36
-    21300074: ColorPalette_37
-    21300076: ColorPalette_38
-    21300078: ColorPalette_39
-    21300080: ColorPalette_40
-    21300082: ColorPalette_41
-    21300084: ColorPalette_42
-    21300086: ColorPalette_43
-    21300088: ColorPalette_44
-    21300090: ColorPalette_45
-    21300092: ColorPalette_46
-    21300094: ColorPalette_47
-    21300096: ColorPalette_48
-    21300098: ColorPalette_49
-    21300100: ColorPalette_50
-    21300102: ColorPalette_51
-    21300104: ColorPalette_52
-    21300106: ColorPalette_53
-    21300108: ColorPalette_54
-    21300110: ColorPalette_55
-    21300112: ColorPalette_56
-    21300114: ColorPalette_57
-    21300116: ColorPalette_58
-    21300118: ColorPalette_59
-    21300120: ColorPalette_60
-    21300122: ColorPalette_61
-    21300124: ColorPalette_62
-    21300126: ColorPalette_63
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: ColorPalette_0
+  - first:
+      213: 21300002
+    second: ColorPalette_1
+  - first:
+      213: 21300004
+    second: ColorPalette_2
+  - first:
+      213: 21300006
+    second: ColorPalette_3
+  - first:
+      213: 21300008
+    second: ColorPalette_4
+  - first:
+      213: 21300010
+    second: ColorPalette_5
+  - first:
+      213: 21300012
+    second: ColorPalette_6
+  - first:
+      213: 21300014
+    second: ColorPalette_7
+  - first:
+      213: 21300016
+    second: ColorPalette_8
+  - first:
+      213: 21300018
+    second: ColorPalette_9
+  - first:
+      213: 21300020
+    second: ColorPalette_10
+  - first:
+      213: 21300022
+    second: ColorPalette_11
+  - first:
+      213: 21300024
+    second: ColorPalette_12
+  - first:
+      213: 21300026
+    second: ColorPalette_13
+  - first:
+      213: 21300028
+    second: ColorPalette_14
+  - first:
+      213: 21300030
+    second: ColorPalette_15
+  - first:
+      213: 21300032
+    second: ColorPalette_16
+  - first:
+      213: 21300034
+    second: ColorPalette_17
+  - first:
+      213: 21300036
+    second: ColorPalette_18
+  - first:
+      213: 21300038
+    second: ColorPalette_19
+  - first:
+      213: 21300040
+    second: ColorPalette_20
+  - first:
+      213: 21300042
+    second: ColorPalette_21
+  - first:
+      213: 21300044
+    second: ColorPalette_22
+  - first:
+      213: 21300046
+    second: ColorPalette_23
+  - first:
+      213: 21300048
+    second: ColorPalette_24
+  - first:
+      213: 21300050
+    second: ColorPalette_25
+  - first:
+      213: 21300052
+    second: ColorPalette_26
+  - first:
+      213: 21300054
+    second: ColorPalette_27
+  - first:
+      213: 21300056
+    second: ColorPalette_28
+  - first:
+      213: 21300058
+    second: ColorPalette_29
+  - first:
+      213: 21300060
+    second: ColorPalette_30
+  - first:
+      213: 21300062
+    second: ColorPalette_31
+  - first:
+      213: 21300064
+    second: ColorPalette_32
+  - first:
+      213: 21300066
+    second: ColorPalette_33
+  - first:
+      213: 21300068
+    second: ColorPalette_34
+  - first:
+      213: 21300070
+    second: ColorPalette_35
+  - first:
+      213: 21300072
+    second: ColorPalette_36
+  - first:
+      213: 21300074
+    second: ColorPalette_37
+  - first:
+      213: 21300076
+    second: ColorPalette_38
+  - first:
+      213: 21300078
+    second: ColorPalette_39
+  - first:
+      213: 21300080
+    second: ColorPalette_40
+  - first:
+      213: 21300082
+    second: ColorPalette_41
+  - first:
+      213: 21300084
+    second: ColorPalette_42
+  - first:
+      213: 21300086
+    second: ColorPalette_43
+  - first:
+      213: 21300088
+    second: ColorPalette_44
+  - first:
+      213: 21300090
+    second: ColorPalette_45
+  - first:
+      213: 21300092
+    second: ColorPalette_46
+  - first:
+      213: 21300094
+    second: ColorPalette_47
+  - first:
+      213: 21300096
+    second: ColorPalette_48
+  - first:
+      213: 21300098
+    second: ColorPalette_49
+  - first:
+      213: 21300100
+    second: ColorPalette_50
+  - first:
+      213: 21300102
+    second: ColorPalette_51
+  - first:
+      213: 21300104
+    second: ColorPalette_52
+  - first:
+      213: 21300106
+    second: ColorPalette_53
+  - first:
+      213: 21300108
+    second: ColorPalette_54
+  - first:
+      213: 21300110
+    second: ColorPalette_55
+  - first:
+      213: 21300112
+    second: ColorPalette_56
+  - first:
+      213: 21300114
+    second: ColorPalette_57
+  - first:
+      213: 21300116
+    second: ColorPalette_58
+  - first:
+      213: 21300118
+    second: ColorPalette_59
+  - first:
+      213: 21300120
+    second: ColorPalette_60
+  - first:
+      213: 21300122
+    second: ColorPalette_61
+  - first:
+      213: 21300124
+    second: ColorPalette_62
+  - first:
+      213: 21300126
+    second: ColorPalette_63
   externalObjects: {}
-  serializedVersion: 4
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -87,6 +213,10 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -96,8 +226,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -109,18 +239,25 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 5
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
-  - buildTarget: DefaultTexturePlatform
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -130,7 +267,9 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: Standalone
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -140,7 +279,9 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: iPhone
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -150,7 +291,9 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: Android
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -160,6 +303,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -177,6 +321,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_1
       rect:
@@ -191,6 +342,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_2
       rect:
@@ -205,6 +363,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_3
       rect:
@@ -219,6 +384,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_4
       rect:
@@ -233,6 +405,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_5
       rect:
@@ -247,6 +426,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_6
       rect:
@@ -261,6 +447,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_7
       rect:
@@ -275,6 +468,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_8
       rect:
@@ -289,6 +489,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_9
       rect:
@@ -303,6 +510,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 23305410000000000800000000000000
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_10
       rect:
@@ -317,6 +531,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 43305410000000000800000000000000
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_11
       rect:
@@ -331,6 +552,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 63305410000000000800000000000000
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_12
       rect:
@@ -345,6 +573,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 83305410000000000800000000000000
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_13
       rect:
@@ -359,6 +594,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a3305410000000000800000000000000
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_14
       rect:
@@ -373,6 +615,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c3305410000000000800000000000000
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_15
       rect:
@@ -387,6 +636,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e3305410000000000800000000000000
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_16
       rect:
@@ -401,6 +657,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 04305410000000000800000000000000
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_17
       rect:
@@ -415,6 +678,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 24305410000000000800000000000000
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_18
       rect:
@@ -429,6 +699,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 44305410000000000800000000000000
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_19
       rect:
@@ -443,6 +720,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 64305410000000000800000000000000
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_20
       rect:
@@ -457,6 +741,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 84305410000000000800000000000000
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_21
       rect:
@@ -471,6 +762,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a4305410000000000800000000000000
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_22
       rect:
@@ -485,6 +783,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c4305410000000000800000000000000
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_23
       rect:
@@ -499,6 +804,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e4305410000000000800000000000000
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_24
       rect:
@@ -513,6 +825,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 05305410000000000800000000000000
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_25
       rect:
@@ -527,6 +846,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 25305410000000000800000000000000
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_26
       rect:
@@ -541,6 +867,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 45305410000000000800000000000000
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_27
       rect:
@@ -555,6 +888,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 65305410000000000800000000000000
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_28
       rect:
@@ -569,6 +909,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 85305410000000000800000000000000
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_29
       rect:
@@ -583,6 +930,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a5305410000000000800000000000000
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_30
       rect:
@@ -597,6 +951,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c5305410000000000800000000000000
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_31
       rect:
@@ -611,6 +972,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e5305410000000000800000000000000
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_32
       rect:
@@ -625,6 +993,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 06305410000000000800000000000000
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_33
       rect:
@@ -639,6 +1014,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 26305410000000000800000000000000
+      internalID: 21300066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_34
       rect:
@@ -653,6 +1035,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 46305410000000000800000000000000
+      internalID: 21300068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_35
       rect:
@@ -667,6 +1056,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 66305410000000000800000000000000
+      internalID: 21300070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_36
       rect:
@@ -681,6 +1077,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 86305410000000000800000000000000
+      internalID: 21300072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_37
       rect:
@@ -695,6 +1098,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a6305410000000000800000000000000
+      internalID: 21300074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_38
       rect:
@@ -709,6 +1119,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c6305410000000000800000000000000
+      internalID: 21300076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_39
       rect:
@@ -723,6 +1140,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e6305410000000000800000000000000
+      internalID: 21300078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_40
       rect:
@@ -737,6 +1161,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 07305410000000000800000000000000
+      internalID: 21300080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_41
       rect:
@@ -751,6 +1182,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 27305410000000000800000000000000
+      internalID: 21300082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_42
       rect:
@@ -765,6 +1203,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 47305410000000000800000000000000
+      internalID: 21300084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_43
       rect:
@@ -779,6 +1224,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 67305410000000000800000000000000
+      internalID: 21300086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_44
       rect:
@@ -793,6 +1245,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 87305410000000000800000000000000
+      internalID: 21300088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_45
       rect:
@@ -807,6 +1266,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a7305410000000000800000000000000
+      internalID: 21300090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_46
       rect:
@@ -821,6 +1287,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c7305410000000000800000000000000
+      internalID: 21300092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_47
       rect:
@@ -835,6 +1308,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e7305410000000000800000000000000
+      internalID: 21300094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_48
       rect:
@@ -849,6 +1329,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 08305410000000000800000000000000
+      internalID: 21300096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_49
       rect:
@@ -863,6 +1350,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 28305410000000000800000000000000
+      internalID: 21300098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_50
       rect:
@@ -877,6 +1371,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 48305410000000000800000000000000
+      internalID: 21300100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_51
       rect:
@@ -891,6 +1392,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 68305410000000000800000000000000
+      internalID: 21300102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_52
       rect:
@@ -905,6 +1413,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 88305410000000000800000000000000
+      internalID: 21300104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_53
       rect:
@@ -919,6 +1434,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a8305410000000000800000000000000
+      internalID: 21300106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_54
       rect:
@@ -933,6 +1455,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c8305410000000000800000000000000
+      internalID: 21300108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_55
       rect:
@@ -947,6 +1476,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e8305410000000000800000000000000
+      internalID: 21300110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_56
       rect:
@@ -961,6 +1497,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 09305410000000000800000000000000
+      internalID: 21300112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_57
       rect:
@@ -975,6 +1518,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 29305410000000000800000000000000
+      internalID: 21300114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_58
       rect:
@@ -989,6 +1539,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 49305410000000000800000000000000
+      internalID: 21300116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_59
       rect:
@@ -1003,6 +1560,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 69305410000000000800000000000000
+      internalID: 21300118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_60
       rect:
@@ -1017,6 +1581,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 89305410000000000800000000000000
+      internalID: 21300120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_61
       rect:
@@ -1031,6 +1602,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a9305410000000000800000000000000
+      internalID: 21300122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_62
       rect:
@@ -1045,6 +1623,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c9305410000000000800000000000000
+      internalID: 21300124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: ColorPalette_63
       rect:
@@ -1059,9 +1644,91 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e9305410000000000800000000000000
+      internalID: 21300126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ColorPalette_19: 21300038
+      ColorPalette_14: 21300028
+      ColorPalette_16: 21300032
+      ColorPalette_52: 21300104
+      ColorPalette_32: 21300064
+      ColorPalette_15: 21300030
+      ColorPalette_9: 21300018
+      ColorPalette_62: 21300124
+      ColorPalette_22: 21300044
+      ColorPalette_38: 21300076
+      ColorPalette_20: 21300040
+      ColorPalette_28: 21300056
+      ColorPalette_45: 21300090
+      ColorPalette_63: 21300126
+      ColorPalette_54: 21300108
+      ColorPalette_1: 21300002
+      ColorPalette_40: 21300080
+      ColorPalette_18: 21300036
+      ColorPalette_57: 21300114
+      ColorPalette_37: 21300074
+      ColorPalette_0: 21300000
+      ColorPalette_11: 21300022
+      ColorPalette_59: 21300118
+      ColorPalette_7: 21300014
+      ColorPalette_35: 21300070
+      ColorPalette_53: 21300106
+      ColorPalette_49: 21300098
+      ColorPalette_5: 21300010
+      ColorPalette_34: 21300068
+      ColorPalette_48: 21300096
+      ColorPalette_2: 21300004
+      ColorPalette_55: 21300110
+      ColorPalette_6: 21300012
+      ColorPalette_47: 21300094
+      ColorPalette_29: 21300058
+      ColorPalette_39: 21300078
+      ColorPalette_12: 21300024
+      ColorPalette_58: 21300116
+      ColorPalette_33: 21300066
+      ColorPalette_24: 21300048
+      ColorPalette_43: 21300086
+      ColorPalette_3: 21300006
+      ColorPalette_30: 21300060
+      ColorPalette_36: 21300072
+      ColorPalette_25: 21300050
+      ColorPalette_10: 21300020
+      ColorPalette_60: 21300120
+      ColorPalette_21: 21300042
+      ColorPalette_61: 21300122
+      ColorPalette_44: 21300088
+      ColorPalette_8: 21300016
+      ColorPalette_42: 21300084
+      ColorPalette_46: 21300092
+      ColorPalette_41: 21300082
+      ColorPalette_17: 21300034
+      ColorPalette_50: 21300100
+      ColorPalette_56: 21300112
+      ColorPalette_23: 21300046
+      ColorPalette_31: 21300062
+      ColorPalette_13: 21300026
+      ColorPalette_26: 21300052
+      ColorPalette_27: 21300054
+      ColorPalette_51: 21300102
+      ColorPalette_4: 21300008
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
